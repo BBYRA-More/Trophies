@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>BBYRA Fleet Championships | BBYRA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#052058;--navy-dark:#031540;--navy-mid:#0a3580;--gold:#c8902a;--gold-light:#e8b84b;--white:#ffffff;--off-white:#f4f6fa;--gray-light:#e4e9f2;--gray-mid:#a8b6cc;--gray-text:#506080;--text:#1a2540;--font-serif:'Merriweather',Georgia,serif;--font-sans:'Source Sans 3','Segoe UI',sans-serif;--radius:6px;--shadow-md:0 4px 18px rgba(5,32,88,0.12);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font-sans);color:var(--text);background:var(--off-white);font-size:16px;line-height:1.6;}
+    a{color:var(--navy);text-decoration:none;transition:color .2s;}
+    a:hover{color:var(--gold);}
+    .page-hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,var(--navy-mid) 100%);color:var(--white);padding:44px 24px 36px;text-align:center;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse at 15% 60%,rgba(200,144,42,0.13) 0%,transparent 55%);pointer-events:none;}
+    .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);}
+    .page-hero-inner{position:relative;max-width:860px;margin:0 auto;}
+    .eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:10px;}
+    .page-hero h1{font-family:var(--font-serif);font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:700;line-height:1.2;margin-bottom:10px;}
+    .page-hero p{font-size:0.92rem;color:rgba(255,255,255,0.75);max-width:580px;margin:0 auto;}
+    .jump-nav{background:var(--white);border-bottom:2px solid var(--gray-light);padding:8px 24px;position:sticky;top:0;z-index:100;box-shadow:0 1px 4px rgba(5,32,88,0.09);}
+    .jump-nav-inner{max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;gap:5px 6px;align-items:center;}
+    .jump-label{font-size:0.70rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray-mid);margin-right:4px;white-space:nowrap;}
+    .jump-nav a{font-size:0.76rem;font-weight:600;color:var(--navy);padding:3px 10px;border-radius:20px;border:1.5px solid var(--gray-light);transition:all .18s;white-space:nowrap;}
+    .jump-nav a:hover{background:var(--navy);color:var(--white);border-color:var(--navy);}
+    .page-main{max-width:960px;margin:0 auto;padding:28px 24px 60px;}
+    .trophy-section{margin-bottom:40px;background:var(--white);border-radius:10px;box-shadow:var(--shadow-md);overflow:hidden;}
+    .trophy-header{background:linear-gradient(90deg,var(--navy) 0%,var(--navy-mid) 100%);padding:16px 24px;}
+    .trophy-header h2{font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--white);}
+    .trophy-header .award-type{font-size:0.70rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold-light);margin-top:3px;}
+    .trophy-body{padding:24px;}
+    .trophy-top{display:grid;grid-template-columns:160px 1fr;gap:24px;margin-bottom:20px;}
+    .trophy-photo img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow-md);border:2px solid var(--gray-light);}
+    .trophy-photo .placeholder{width:100%;aspect-ratio:3/4;background:var(--off-white);border:2px dashed var(--gray-light);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:2.5rem;color:var(--gray-mid);}
+    .trophy-detail h3{font-family:var(--font-serif);font-size:1.0rem;font-weight:700;color:var(--navy-dark);margin-bottom:6px;}
+    .trophy-detail .sub-title{font-size:0.82rem;font-style:italic;color:var(--gray-text);margin-bottom:12px;line-height:1.5;}
+    .trophy-detail p{font-size:0.88rem;color:var(--gray-text);line-height:1.75;margin-bottom:10px;}
+    .trophy-detail p:last-child{margin-bottom:0;}
+    .archive-btn{display:inline-flex;align-items:center;gap:5px;font-size:0.75rem;font-weight:600;color:var(--navy);border:1.5px solid var(--navy);padding:3px 11px;border-radius:4px;margin-top:8px;transition:all .18s;text-decoration:none;}
+    .archive-btn:hover{background:var(--navy);color:var(--white);}
+    .winners-section{border-top:1px solid var(--gray-light);padding-top:18px;margin-top:4px;}
+    .winners-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--navy);margin-bottom:10px;}
+    .sheet-wrap{width:100%;border-radius:var(--radius);overflow:hidden;border:1px solid var(--gray-light);}
+    .sheet-wrap iframe{width:100%;border:none;display:block;}
+    .sheet-note{font-size:0.74rem;color:var(--gray-text);margin-top:6px;font-style:italic;text-align:right;}
+    .info-box{background:var(--off-white);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:10px 14px;margin:10px 0;font-size:0.84rem;color:var(--text);line-height:1.7;}
+    @media(max-width:600px){.trophy-top{grid-template-columns:1fr;}.page-hero{padding:28px 16px 24px;}.trophy-body{padding:16px;}}
+  </style>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="eyebrow">Barnegat Bay Yacht Racing Association</p>
+    <h1>Fleet Championship Trophies</h1>
+    <p>Annual BBYRA fleet championships recognising the season champion in each class racing on Barnegat Bay.</p>
+  </div>
+</section>
+
+<nav class="jump-nav">
+  <div class="jump-nav-inner">
+    <span class="jump-label">Jump to:</span>
+    <a href="#acat">A Cat</a>
+    <a href="#escow">E Scow</a>
+    <a href="#ensign">Ensign</a>
+    <a href="#flyingscot">Flying Scot</a>
+    <a href="#msloop">M Scow</a>
+    <a href="#mcscow">MC Scow</a>
+    <a href="#sanderling">Sanderling</a>
+    <a href="#sandpiper">Sandpiper</a>
+    <a href="#midget1">Midget Single</a>
+    <a href="#midget2">Midget Double</a>
+  </div>
+</nav>
+
+<main class="page-main">
+
+  <!-- A CAT -->
+  <section class="trophy-section" id="acat">
+    <div class="trophy-header">
+      <h2>A Cat Fleet Championship Trophy</h2>
+      <div class="award-type">Class A Catboat &mdash; BBYRA Season Champion</div>
+    </div>
+    <div class="trophy-body">
+      <div class="trophy-top">
+        <div class="trophy-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_aCat.jpg" alt="A Cat Championship Trophy"/></div>
+        <div class="trophy-detail">
+          <h3>A Cat Fleet Champion</h3>
+          <p class="sub-title">Barnegat Bay Yacht Racing Association &mdash; Class A Catboat Champion</p>
+          <p>This trophy was first presented in 2007. The base is engraved with the names of the Class A Catboat champions for every year since 1922, making it one of the longest continuously running championship records on Barnegat Bay.</p>
+        </div>
+      </div>
+      <div class="winners-section">
+        <p class="winners-label">Winners History</p>
+        <div class="sheet-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSUoMkvvNLYXlUPz8Q3KIkohuUIGAlLD2kM__tq0GfH1C0CAf2C9OWQWs7W4StoO8_MhNNQh2YlO_cE/pubhtml?gid=1144210346&single=true&widget=false&headers=false&chrome=false" height="520" title="A Cat champions"></iframe></div>
+        <p class="sheet-note">Data maintained in the BBYRA Championships spreadsheet &mdash; updates appear automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- E SCOW -->
+  <section class="trophy-section" id="escow">
+    <div class="trophy-header">
+      <h2>E Scow Fleet Championship &mdash; L. Ward Wight Trophy</h2>
+      <div class="award-type">E Scow &mdash; BBYRA Season Champion</div>
+    </div>
+    <div class="trophy-body">
+      <div class="trophy-top">
+        <div class="trophy-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_eSloopP.jpg" alt="E Scow Championship Trophy"/></div>
+        <div class="trophy-detail">
+          <h3>L. Ward Wight Trophy</h3>
+          <p class="sub-title">Donated in Memory of L. Ward Wight &mdash; Manasquan River Yacht Club</p>
+          <p>Awarded to the winner of the E Scow fleet in the BBYRA Championship Series. The trophy features a model carved by Bud Meyer of Pewaukee, Wisconsin. Property of Wm. Wight, Manasquan, N.J.</p>
+          <a class="archive-btn" href="https://bbyraarchive.org/trophy/bb_eSloopPDOG.gif" target="_blank" rel="noopener">&#128196; Deed of Gift</a>
+        </div>
+      </div>
+      <div class="winners-section">
+        <p class="winners-label">Winners History</p>
+        <div class="sheet-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSUoMkvvNLYXlUPz8Q3KIkohuUIGAlLD2kM__tq0GfH1C0CAf2C9OWQWs7W4StoO8_MhNNQh2YlO_cE/pubhtml?gid=5959598&single=true&widget=false&headers=false&chrome=false" height="420" title="E Scow champions"></iframe></div>
+        <p class="sheet-note">Data maintained in the BBYRA Championships spreadsheet &mdash; updates appear automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENSIGN -->
+  <section class="trophy-section" id="ensign">
+    <div class="trophy-header">
+      <h2>Ensign Fleet Championship &mdash; William Meredith Wood Memorial Trophy</h2>
+      <div class="award-type">Ensign Fleet 63 &mdash; BBYRA Season Champion</div>
+    </div>
+    <div class="trophy-body">
+      <div class="trophy-top">
+        <div class="trophy-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_ensignChampion.jpg" alt="William Meredith Wood Memorial Trophy"/></div>
+        <div class="trophy-detail">
+          <h3>William Meredith Wood Memorial Trophy</h3>
+          <p class="sub-title">Awarded to the BBYRA Ensign Fleet 63 Season Champion &mdash; First awarded 2012</p>
+          <p>William M. Wood and his crew and wife Peggy Keyser started winning trophies on Barnegat Bay in the 1910s. Bill won BBYRA Championships in his 18ft. Catboat <em>Suds</em> in 1927 and his Barnegat 17, <em>Grandmother Honey</em>, in 1967. In the 1950s he helped develop the current BBYRA Barrel Courses. In 1972 he bought Pearson Ensign #176, <em>Demitasse</em>, and in 1973 formed Ensign Fleet 63. Over the next twelve years he helped the fleet grow to 23 racing boats. Bill taught 6 grandchildren to sail, race, crab, and overnight cruise on the <em>Demitasse</em>.</p>
+        </div>
+      </div>
+      <div class="winners-section">
+        <p class="winners-label">Winners History</p>
+        <div class="sheet-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSUoMkvvNLYXlUPz8Q3KIkohuUIGAlLD2kM__tq0GfH1C0CAf2C9OWQWs7W4StoO8_MhNNQh2YlO_cE/pubhtml?gid=1074116883&single=true&widget=false&headers=false&chrome=false" height="320" title="Ensign champions"></iframe></div>
+        <p class="sheet-note">Data maintained in the BBYRA Championships spreadsheet &mdash; updates appear automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLYING SCOT -->
+  <section class="trophy-section" id="flyingscot">
+    <div class="trophy-header">
+      <h2>Flying Scot Fleet Championship &mdash; Ralph and Ethel Manee Perpetual Trophy</h2>
+      <div class="award-type">Flying Scot &mdash; BBYRA Season Champion</div>
+    </div>
+    <div class="trophy-body">
+      <div class="trophy-top">
+        <div class="trophy-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_flyingScot.jpg" alt="Ralph and Ethel Manee Perpetual Trophy"/></div>
+        <div class="trophy-detail">
+          <h3>Ralph and Ethel Manee Perpetual Trophy</h3>
+          <p class="sub-title">Flying Scot &mdash; BBYRA Championship</p>
+          <p>Awarded annually to the BBYRA Flying Scot fleet season champion. Ralph Manee of Shore Acres Yacht Club was himself a dominant force in the fleet, winning the championship eight consecutive times from 1983 through 1989 and again in 1972. Peter Sayia of SPYC has won the trophy a remarkable 16 times.</p>
+          <div class="info-box">The fleet was not scheduled 1973&ndash;1982.</div>
+        </div>
+      </div>
+      <div class="winners-section">
+        <p class="winners-label">Winners History</p>
+        <div class="sheet-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSUoMkvvNLYXlUPz8Q3KIkohuUIGAlLD2kM__tq0GfH1C0CAf2C9OWQWs7W4StoO8_MhNNQh2YlO_cE/pubhtml?gid=411887713&single=true&widget=false&headers=false&chrome=false" height="480" title="Flying Scot champions"></iframe></div>
+        <p class="sheet-note">Data maintained in the BBYRA Championships spreadsheet &mdash; updates appear automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- M SCOW -->
+  <section class="trophy-section" id="msloop">
+    <div class="trophy-header">
+      <h2>M Scow Fleet Championship Trophy</h2>
+      <div class="award-type">M Scow 16ft. &mdash; BBYRA Season Champion</div>
+    </div>
+    <div class="trophy-body">
+      <div class="trophy-top">
+        <div class="trophy-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_mSloop.jpg" alt="M Scow Fleet Championship Trophy"/></div>
+        <div class="trophy-detail">
+          <h3>M Scow Fleet Trophy</h3>
+          <p class="sub-title">M Scow 16ft. &mdash; BBYRA Season Championship</p>
+          <p>Awarded annually to the BBYRA M Scow fleet season champion. Lavallette Yacht Club has dominated the trophy in recent years, with the Applegate and Magno families winning multiple times.</p>
+        </div>
+      </div>
+      <div class="winners-section">
+        <p class="winners-label">Winners History</p>
+        <div class="sheet-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSUoMkvvNLYXlUPz8Q3KIkohuUIGAlLD2kM__tq0GfH1C0CAf2C9OWQWs7W4StoO8_MhNNQh2YlO_cE/pubhtml?gid=251912501&single=true&widget=false&headers=false&chrome=false" height="320" title="M Scow champions"></iframe></div>
+        <p class="sheet-note">Data maintained in the BBYRA Championships spreadsheet &mdash; updates appear automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MC SCOW -->
+  <section class="trophy-section" id="mcscow">
+    <div class="trophy-header">
+      <h2>MC Scow Fleet Championship &mdash; James T. &amp; Kathleen Reynolds Memorial Trophy</h2>
+      <div class="award-type">MC Scow 16ft. &mdash; BBYRA Series Champion</div>
+    </div>
+    <div class="trophy-body">
+      <div class="trophy-top">
+        <div class="trophy-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_mcscow.jpg" alt="James T. and Kathleen Reynolds Memorial Trophy"/></div>
+        <div class="trophy-detail">
+          <h3>James T. &amp; Kathleen Reynolds Memorial Trophy</h3>
+          <p class="sub-title">MC Scow 16ft. &mdash; BBYRA Series Championship</p>
+          <p>Awarded to the winner of the MC Scow fleet in the BBYRA Championship Series. Mark Beaton of MCYC has been the dominant force in recent years, winning three consecutive titles.</p>
+        </div>
+      </div>
+      <div class="winners-section">
+        <p class="winners-label">Winners History</p>
+        <div class="sheet-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSUoMkvvNLYXlUPz8Q3KIkohuUIGAlLD2kM__tq0GfH1C0CAf2C9OWQWs7W4StoO8_MhNNQh2YlO_cE/pubhtml?gid=896631785&single=true&widget=false&headers=false&chrome=false" height="260" title="MC Scow champions"></iframe></div>
+        <p class="sheet-note">Data maintained in the BBYRA Championships spreadsheet &mdash; updates appear automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SANDERLING -->
+  <section class="trophy-section" id="sanderling">
+    <div class="trophy-header">
+      <h2>Sanderling Fleet Championship &mdash; Mark &amp; Carmel Schleckser Trophy</h2>
+      <div class="award-type">Sanderling (B-Cat) &mdash; BBYRA Season Champion</div>
+    </div>
+    <div class="trophy-body">
+      <div class="trophy-top">
+        <div class="trophy-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_sanderling.jpg" alt="Sanderling Championship Trophy"/></div>
+        <div class="trophy-detail">
+          <h3>B.B.Y.R.A. Mark &amp; Carmel Schleckser Sanderling Champion</h3>
+          <p class="sub-title">A plaque with a Sanderling half model and the names of fleet champions</p>
+          <p>Awarded to the winner of the Sanderling fleet in the annual BBYRA Championship series. Donated in 2009 with past champions engraved back to 1974. Renamed the Mark &amp; Carmel Schleckser Sanderling Champion in 2021. The Schleckser family of LYC won the trophy eight times; Bob Adams of BHYC has also won multiple times.</p>
+        </div>
+      </div>
+      <div class="winners-section">
+        <p class="winners-label">Winners History</p>
+        <div class="sheet-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSUoMkvvNLYXlUPz8Q3KIkohuUIGAlLD2kM__tq0GfH1C0CAf2C9OWQWs7W4StoO8_MhNNQh2YlO_cE/pubhtml?gid=1457358381&single=true&widget=false&headers=false&chrome=false" height="500" title="Sanderling champions"></iframe></div>
+        <p class="sheet-note">Data maintained in the BBYRA Championships spreadsheet &mdash; updates appear automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SANDPIPER -->
+  <section class="trophy-section" id="sandpiper">
+    <div class="trophy-header">
+      <h2>Sandpiper Fleet Championship Trophy</h2>
+      <div class="award-type">Sandpiper &mdash; BBYRA Season Champion</div>
+    </div>
+    <div class="trophy-body">
+      <div class="trophy-top">
+        <div class="trophy-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_sandpiper.jpg" alt="Sandpiper Class Championship Trophy"/></div>
+        <div class="trophy-detail">
+          <h3>The Sandpiper Class of Barnegat Bay Champion</h3>
+          <p class="sub-title">New trophy for 2011 &mdash; donated by the Sandpiper Fleet of Barnegat Bay</p>
+          <p>The base is engraved with the names of Sandpiper Class Champions beginning in 1994, the first year the Sandpipers raced in the BBYRA. Paul Gelenitis of MCYC has won the championship an extraordinary 15 times, making him the most dominant champion in the fleet&rsquo;s history.</p>
+        </div>
+      </div>
+      <div class="winners-section">
+        <p class="winners-label">Winners History</p>
+        <div class="sheet-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSUoMkvvNLYXlUPz8Q3KIkohuUIGAlLD2kM__tq0GfH1C0CAf2C9OWQWs7W4StoO8_MhNNQh2YlO_cE/pubhtml?gid=1708751189&single=true&widget=false&headers=false&chrome=false" height="440" title="Sandpiper champions"></iframe></div>
+        <p class="sheet-note">Data maintained in the BBYRA Championships spreadsheet &mdash; updates appear automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MIDGET SINGLE -->
+  <section class="trophy-section" id="midget1">
+    <div class="trophy-header">
+      <h2>East Coast Midgets &mdash; Single Handed Championship</h2>
+      <div class="award-type">Optimist Pram &mdash; Single Handed Midget Champion</div>
+    </div>
+    <div class="trophy-body">
+      <div class="trophy-top">
+        <div class="trophy-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_midget1.jpg" alt="Single Handed Midget Championship Trophy"/></div>
+        <div class="trophy-detail">
+          <h3>Single Handed Midget Champion &mdash; Optimist Pram</h3>
+          <p class="sub-title">Barnegat Bay Yacht Racing Association</p>
+          <p>This was originally a single championship that has been split into two separate competitions &mdash; Single Handed and Double Handed &mdash; each with history back to the beginning. The single handed championship is sailed in the Optimist Pram. Robin Brown of BYC won the championship five times in the 1950s and 1960s. Peter Commette of MYC also won three times.</p>
+          <div class="info-box">Records from 1982&ndash;1989 are incomplete.</div>
+        </div>
+      </div>
+      <div class="winners-section">
+        <p class="winners-label">Winners History</p>
+        <div class="sheet-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSUoMkvvNLYXlUPz8Q3KIkohuUIGAlLD2kM__tq0GfH1C0CAf2C9OWQWs7W4StoO8_MhNNQh2YlO_cE/pubhtml?gid=1631887509&single=true&widget=false&headers=false&chrome=false" height="500" title="Single Handed Midget champions"></iframe></div>
+        <p class="sheet-note">Data maintained in the BBYRA Championships spreadsheet &mdash; updates appear automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MIDGET DOUBLE -->
+  <section class="trophy-section" id="midget2">
+    <div class="trophy-header">
+      <h2>East Coast Midgets &mdash; Double Handed Championship</h2>
+      <div class="award-type">Club 420 &mdash; Double Handed Midget Champion</div>
+    </div>
+    <div class="trophy-body">
+      <div class="trophy-top">
+        <div class="trophy-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_midget2.jpg" alt="Double Handed Midget Championship Trophy"/></div>
+        <div class="trophy-detail">
+          <h3>Double Handed Midget Champion &mdash; Club 420</h3>
+          <p class="sub-title">Barnegat Bay Yacht Racing Association</p>
+          <p>The double handed championship is sailed in the Club 420. Records extend back to 1951, making this one of the longest-running junior championship records in the BBYRA. Notable winners include Robin Brown of BYC, Jay Lutz of MCYC, and Peggy Roesler of TRYC. The championship was not awarded in 2020&ndash;2022 due to Covid-19.</p>
+        </div>
+      </div>
+      <div class="winners-section">
+        <p class="winners-label">Winners History</p>
+        <div class="sheet-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSUoMkvvNLYXlUPz8Q3KIkohuUIGAlLD2kM__tq0GfH1C0CAf2C9OWQWs7W4StoO8_MhNNQh2YlO_cE/pubhtml?gid=2077564127&single=true&widget=false&headers=false&chrome=false" height="520" title="Double Handed Midget champions"></iframe></div>
+        <p class="sheet-note">Data maintained in the BBYRA Championships spreadsheet &mdash; updates appear automatically.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
