@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Host Day Trophies | BBYRA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#052058;--navy-dark:#031540;--navy-mid:#0a3580;--gold:#c8902a;--gold-light:#e8b84b;--white:#ffffff;--off-white:#f4f6fa;--gray-light:#e4e9f2;--gray-mid:#a8b6cc;--gray-text:#506080;--text:#1a2540;--font-serif:'Merriweather',Georgia,serif;--font-sans:'Source Sans 3','Segoe UI',sans-serif;--radius:6px;--shadow-md:0 4px 18px rgba(5,32,88,0.12);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font-sans);color:var(--text);background:var(--off-white);font-size:16px;line-height:1.6;}
+    a{color:var(--navy);text-decoration:none;transition:color .2s;}
+    a:hover{color:var(--gold);}
+    .page-hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,var(--navy-mid) 100%);color:var(--white);padding:32px 24px 28px;text-align:center;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse at 15% 60%,rgba(200,144,42,0.13) 0%,transparent 55%),radial-gradient(ellipse at 85% 15%,rgba(255,255,255,0.04) 0%,transparent 50%);pointer-events:none;}
+    .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);}
+    .page-hero-inner{position:relative;max-width:760px;margin:0 auto;}
+    .eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:10px;}
+    .page-hero h1{font-family:var(--font-serif);font-size:clamp(1.7rem,4vw,2.6rem);font-weight:700;line-height:1.2;margin-bottom:14px;}
+    .page-hero p{font-size:0.97rem;color:rgba(255,255,255,0.78);max-width:600px;margin:0 auto 20px;}
+    .hero-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;}
+    .hero-sub-link{display:inline-block;background:rgba(255,255,255,0.10);border:1.5px solid rgba(200,144,42,0.55);color:var(--gold-light);padding:8px 20px;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;transition:background .2s;}
+    .hero-sub-link:hover{background:rgba(200,144,42,0.2);color:var(--gold-light);}
+    .jump-nav{background:var(--white);border-bottom:2px solid var(--gray-light);padding:8px 24px;position:sticky;top:0;z-index:100;box-shadow:0 1px 4px rgba(5,32,88,0.09);}
+    .jump-nav-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:5px 8px;align-items:center;}
+    .jump-label{font-size:0.70rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray-mid);margin-right:4px;white-space:nowrap;}
+    .jump-nav a{font-size:0.78rem;font-weight:600;color:var(--navy);padding:3px 10px;border-radius:20px;border:1.5px solid var(--gray-light);transition:all .18s;white-space:nowrap;}
+    .jump-nav a:hover{background:var(--navy);color:var(--white);border-color:var(--navy);}
+    .page-main{max-width:1200px;margin:0 auto;padding:20px 24px 40px;}
+    .club-section{margin-bottom:24px;background:var(--white);border-radius:10px;box-shadow:var(--shadow-md);overflow:hidden;}
+    .club-header{background:linear-gradient(90deg,var(--navy) 0%,var(--navy-mid) 100%);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .club-header h2{font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--white);}
+    .club-abbr{font-size:0.70rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-light);background:rgba(255,255,255,0.08);padding:3px 10px;border-radius:20px;border:1px solid rgba(200,144,42,0.4);white-space:nowrap;}
+    .trophy-table{width:100%;border-collapse:collapse;}
+    .trophy-table thead{background:var(--gray-light);}
+    .trophy-table th{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.10em;color:var(--gray-text);padding:7px 14px 7px 20px;text-align:left;border-bottom:2px solid var(--gray-mid);}
+
+    .trophy-table td{padding:7px 14px 7px 20px;vertical-align:middle;font-size:0.87rem;border-bottom:1px solid var(--gray-light);}
+    .trophy-table tr:last-child td{border-bottom:none;}
+    .trophy-table tr:hover td{background:rgba(5,32,88,0.025);}
+    .class-cell{width:200px;white-space:nowrap;vertical-align:middle;padding:7px 8px 7px 20px;}
+    
+    .class-label{display:inline-flex;align-items:center;gap:8px;font-size:0.74rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--navy);}
+    .class-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+    .trophy-name{font-weight:600;color:var(--navy-dark);}
+    .trophy-name a{color:inherit;border-bottom:1px dashed var(--gray-mid);transition:border-color .18s,color .18s;}
+    .trophy-name a:hover{color:var(--gold);border-bottom-color:var(--gold);}
+    .archive-link{display:inline-flex;align-items:center;justify-content:center;font-size:0.70rem;font-weight:600;color:var(--navy);border:1.5px solid var(--navy);padding:3px 9px;border-radius:4px;transition:all .18s;}
+    .archive-link:hover{background:var(--navy);color:var(--white);}
+    @media(max-width:600px){.club-header{padding:10px 14px;}.trophy-table th,.trophy-table td{padding-left:12px;}.class-cell{padding-left:12px;white-space:normal;width:auto;}}
+    @media print{
+    .club-section{box-shadow:none;border:1px solid #ccc;page-break-inside:avoid;}}
+  </style>
+</head>
+<body>
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="eyebrow">Barnegat Bay Yacht Racing Association</p>
+    <h1>Host Day Trophies &amp; Awards</h1>
+    <p>BBYRA Championship Series Host Day trophies, organized by host club and sailing class.</p>
+    <div class="hero-links">
+      <a href="https://BBYRA-More.github.io/Trophies/club-trophies-retired.html" target="_blank" rel="noopener" class="hero-sub-link">&#9875; Retired Trophies &#8594;</a>
+    </div>
+  </div>
+</section>
+<nav class="jump-nav" aria-label="Jump to Club">
+  <div class="jump-nav-inner">
+    <span class="jump-label">Jump to:</span>
+    <a href="#bhyc">Bay Head</a><a href="#byc">Beachwood</a><a href="#ihyc">Island Heights</a>
+    <a href="#lyc">Lavallette</a><a href="#myc">Mantoloking</a><a href="#mcyc">Metedeconk River</a>
+    <a href="#nbyc">Normandy Beach</a><a href="#ogyc">Ocean Gate</a><a href="#pbyc">Pine Beach</a>
+    <a href="#spyc">Seaside Park</a><a href="#sayc">Shore Acres</a><a href="#tryc">Toms River</a>
+  </div>
+</nav>
+<main class="page-main">
+
+<section class="club-section" id="bhyc">
+  <div class="club-header"><h2>Bay Head Yacht Club</h2><span class="club-abbr">BHYC</span></div>
+  <table class="trophy-table"><thead><tr><th style="width:140px;">Class / Fleet</th><th>Trophy Name</th></tr></thead><tbody>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>A Cat</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/bh_hartranft.html" target="_blank" rel="noopener">Nelson R. Hartranft Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sanderling</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/bh_vanHorn.html" target="_blank" rel="noopener">Joseph F. Van Horn Perpetual Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sandpiper</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/bh_piperMug.html" target="_blank" rel="noopener">The Piper Mug</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sneakbox</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/bh_orchard.html" target="_blank" rel="noopener">Orchard Trophy</a></td></tr>
+  </tbody></table>
+</section>
+
+<section class="club-section" id="byc">
+  <div class="club-header"><h2>Beachwood Yacht Club</h2><span class="club-abbr">BYC</span></div>
+  <table class="trophy-table"><thead><tr><th style="width:140px;">Class / Fleet</th><th>Trophy Name</th></tr></thead><tbody>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>A Cat</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/bd_moorhouse.html" target="_blank" rel="noopener">Skip Moorhouse Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>E Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/bd_valdes.html" target="_blank" rel="noopener">Bobby Valdes Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Flying Scot</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/bd_reindel.html" target="_blank" rel="noopener">Reindel Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>M Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/bd_melges.html" target="_blank" rel="noopener">Melges Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sneakbox 15ft</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/bd_hotaling.html" target="_blank" rel="noopener">Charles Hotaling Trophy</a></td></tr>
+  </tbody></table>
+</section>
+
+<section class="club-section" id="ihyc">
+  <div class="club-header"><h2>Island Heights Yacht Club</h2><span class="club-abbr">IHYC</span></div>
+  <table class="trophy-table"><thead><tr><th style="width:140px;">Class / Fleet</th><th>Trophy Name</th></tr></thead><tbody>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>A Cat</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ih_lostrom_frankovich.html" target="_blank" rel="noopener">Lostrom &#8211; Frankovich Cup</a></td></tr>
+    <tr><td class="class-cell"></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ih_morgan.html" target="_blank" rel="noopener">J. Willard Morgan Cup</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Ensign</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ih_charlesFranksen.html" target="_blank" rel="noopener">Charles Franksen Trophy</a></td></tr>
+    <tr><td class="class-cell"></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ih_gordonNelson.html" target="_blank" rel="noopener">Gordon M. Nelson Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>E Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ih_wanamakerE.html" target="_blank" rel="noopener">Rodman Wanamaker Trophy</a></td></tr>
+    <tr><td class="class-cell"></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ih_atkinson.html" target="_blank" rel="noopener">Atkinson Trophy</a></td></tr>
+    <tr><td class="class-cell"></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ih_slack.html" target="_blank" rel="noopener">Slack Bowl</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>ILCA 6</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ih_hangarter.html" target="_blank" rel="noopener">Ernest D. Hangarter Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sanderling</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ih_GeorgeDoscher.html" target="_blank" rel="noopener">George E. Doscher III Cup</a></td></tr>
+  </tbody></table>
+</section>
+
+<section class="club-section" id="lyc">
+  <div class="club-header"><h2>Lavallette Yacht Club</h2><span class="club-abbr">LYC</span></div>
+  <table class="trophy-table"><thead><tr><th style="width:140px;">Class / Fleet</th><th>Trophy Name</th></tr></thead><tbody>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>A Cat</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/la_newman.html" target="_blank" rel="noopener">Newman Family Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>E Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/la_alMagno.html" target="_blank" rel="noopener">Al Magno Trophy</a></td></tr>
+    <tr><td class="class-cell"></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/la_magnoFamily.html" target="_blank" rel="noopener">Magno Family Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Flying Scot</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/la_ronKiss.html" target="_blank" rel="noopener">Ron Kiss Memorial Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sanderling</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/la_adams.html" target="_blank" rel="noopener">Adams Cup</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sneakbox</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/la_gough.html" target="_blank" rel="noopener">Bob Gough Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Various</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/la_lavallette.html" target="_blank" rel="noopener">Eli Lavallette Trophy</a></td></tr>
+  </tbody></table>
+</section>
+
+<section class="club-section" id="myc">
+  <div class="club-header"><h2>Mantoloking Yacht Club</h2><span class="club-abbr">MYC</span></div>
+  <table class="trophy-table"><thead><tr><th style="width:140px;">Class / Fleet</th><th>Trophy Name</th></tr></thead><tbody>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>A Cat</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ma_louiseColie.html" target="_blank" rel="noopener">Louise Edgar Colie Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>E Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ma_bilgeboarders.html" target="_blank" rel="noopener">Bilgeboarders Trophy</a></td></tr>
+    <tr><td class="class-cell"></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ma_oMalleyE.html" target="_blank" rel="noopener">O&#39;Malley Trophy</a></td></tr>
+    <tr><td class="class-cell"></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ma_runyonColie.html" target="_blank" rel="noopener">Runyon Colie Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>M Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ma_oMalleyM.html" target="_blank" rel="noopener">O&#39;Malley Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sandpiper</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ma_price.html" target="_blank" rel="noopener">William O. Price Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sneakbox</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/ma_beaton.html" target="_blank" rel="noopener">David Beaton Trophy</a></td></tr>
+  </tbody></table>
+</section>
+
+<section class="club-section" id="mcyc">
+  <div class="club-header"><h2>Metedeconk River Yacht Club</h2><span class="club-abbr">MCYC</span></div>
+  <table class="trophy-table"><thead><tr><th style="width:140px;">Class / Fleet</th><th>Trophy Name</th></tr></thead><tbody>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>E Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/mc_chipSmall.html" target="_blank" rel="noopener">Chip Small Perpetual Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>ILCA 6 Junior</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/mc_dimon.html" target="_blank" rel="noopener">The Dimon Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>M Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/mc_mscow.html" target="_blank" rel="noopener">Metedeconk Senior M Scow Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sandpiper</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/mc_johnPapp.html" target="_blank" rel="noopener">The John Papp Trophy</a></td></tr>
+  </tbody></table>
+</section>
+
+<section class="club-section" id="nbyc">
+  <div class="club-header"><h2>Normandy Beach Yacht Club</h2><span class="club-abbr">NBYC</span></div>
+  <table class="trophy-table"><thead><tr><th style="width:140px;">Class / Fleet</th><th>Trophy Name</th></tr></thead><tbody>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>A Cat</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/nb_foundersCup.html" target="_blank" rel="noopener">Founders Cup</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>ILCA 6 Junior</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/nb_sayers.html" target="_blank" rel="noopener">Mac Sayers Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sanderling</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/nb_laPier.html" target="_blank" rel="noopener">Ted LaPier Trophy</a></td></tr>
+  </tbody></table>
+</section>
+
+<section class="club-section" id="ogyc">
+  <div class="club-header"><h2>Ocean Gate Yacht Club</h2><span class="club-abbr">OGYC</span></div>
+  <table class="trophy-table"><thead><tr><th style="width:140px;">Class / Fleet</th><th>Trophy Name</th></tr></thead><tbody>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>A Cat</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/og_beckCrabbe.html" target="_blank" rel="noopener">Beck Crabbe Memorial Trophy</a></td></tr>
+    <tr><td class="class-cell"></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/og_hartranft.html" target="_blank" rel="noopener">Nelson S. Hartranft Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sneakbox</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/og_mease.html" target="_blank" rel="noopener">Kenneth W. Mease Memorial Trophy</a></td></tr>
+  </tbody></table>
+</section>
+
+<section class="club-section" id="pbyc">
+  <div class="club-header"><h2>Pine Beach Yacht Club</h2><span class="club-abbr">PBYC</span></div>
+  <table class="trophy-table"><thead><tr><th style="width:140px;">Class / Fleet</th><th>Trophy Name</th></tr></thead><tbody>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sanderling</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/pb_marshall.html" target="_blank" rel="noopener">Marshall Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sunfish</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/pb_bush.html" target="_blank" rel="noopener">Ralph R. Bush, Jr. Memorial Trophy</a></td></tr>
+  </tbody></table>
+</section>
+
+<section class="club-section" id="spyc">
+  <div class="club-header"><h2>Seaside Park Yacht Club</h2><span class="club-abbr">SPYC</span></div>
+  <table class="trophy-table"><thead><tr><th style="width:140px;">Class / Fleet</th><th>Trophy Name</th></tr></thead><tbody>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>A Cat</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sp_sewell.html" target="_blank" rel="noopener">Sewell Cup</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>E Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sp_wolstenholme.html" target="_blank" rel="noopener">Wolstenholme Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Flying Scot</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sp_McGarryMcCrae.html" target="_blank" rel="noopener">McGarry &#8211; McCrae Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>ILCA 6 Junior</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sp_garrigues.html" target="_blank" rel="noopener">Garrigues &#8211; Gash Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>M Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sp_stahlerLloydPeltier.html" target="_blank" rel="noopener">Stahler &#8211; Lloyd &#8211; Peltier Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sanderling</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sp_brooks.html" target="_blank" rel="noopener">F. Thompson Brooks Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sandpiper</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sp_debbieStellar.html" target="_blank" rel="noopener">Debbie Wilson Stellar Memorial Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sneakbox</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sp_switlik.html" target="_blank" rel="noopener">Richard Switlik Sr. Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sunfish</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sp_chadwick.html" target="_blank" rel="noopener">John W. Chadwick Trophy</a></td></tr>
+  </tbody></table>
+</section>
+
+<section class="club-section" id="sayc">
+  <div class="club-header"><h2>Shore Acres Yacht Club</h2><span class="club-abbr">SAYC</span></div>
+  <table class="trophy-table"><thead><tr><th style="width:140px;">Class / Fleet</th><th>Trophy Name</th></tr></thead><tbody>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>A Cat</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sa_scorers.html" target="_blank" rel="noopener">The BBYRA Scorers Cup</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Flying Scot</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sa_runyon.html" target="_blank" rel="noopener">Malcolm Eagles Runyon Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>MC Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sa_kettleCup.html" target="_blank" rel="noopener">Kettle Cup</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sanderling</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sa_dutchman.html" target="_blank" rel="noopener">The Dutchman</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sandpiper</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/sa_sandpiper.html" target="_blank" rel="noopener">S.A.Y.C. Sandpiper Trophy</a></td></tr>
+  </tbody></table>
+</section>
+
+<section class="club-section" id="tryc">
+  <div class="club-header"><h2>Toms River Yacht Club</h2><span class="club-abbr">TRYC</span></div>
+  <table class="trophy-table"><thead><tr><th style="width:140px;">Class / Fleet</th><th>Trophy Name</th></tr></thead><tbody>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>A Cat</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/tr_challenge.html" target="_blank" rel="noopener">Toms River Challenge Cup</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Ensign</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/tr_commodores.html" target="_blank" rel="noopener">Commodores Cup</a></td></tr>
+    <tr><td class="class-cell"></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/tr_RobertWarner.html" target="_blank" rel="noopener">Robert C. Warner Memorial Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>E Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/tr_cliffCampbell.html" target="_blank" rel="noopener">Clifford W. Campbell Trophy</a></td></tr>
+    <tr><td class="class-cell"></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/tr_horaceDoan.html" target="_blank" rel="noopener">Horace A. Doan Cup</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Flying Scot</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/tr_terhuneCOE.html" target="_blank" rel="noopener">Terhune Memorial Trophy &#8211; Center of Effort</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>M Scow</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/tr_maureenMontaque.html" target="_blank" rel="noopener">Maureen Montaque Memorial Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sanderling</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/tr_robertSnyder.html" target="_blank" rel="noopener">Robert Snyder Memorial Trophy</a></td></tr>
+    <tr><td class="class-cell"><span class="class-label"><span class="class-dot"></span>Sneakbox</span></td><td class="trophy-name"><a href="https://BBYRA-More.github.io/Trophies/tr_franklinDoan.html" target="_blank" rel="noopener">Franklin Mott Doan Memorial Trophy</a></td></tr>
+  </tbody></table>
+</section>
+
+</main>
+</body>
+</html>
