@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Other Barnegat Bay Area Trophies | BBYRA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#052058;--navy-dark:#031540;--navy-mid:#0a3580;--gold:#c8902a;--gold-light:#e8b84b;--white:#ffffff;--off-white:#f4f6fa;--gray-light:#e4e9f2;--gray-mid:#a8b6cc;--gray-text:#506080;--text:#1a2540;--font-serif:'Merriweather',Georgia,serif;--font-sans:'Source Sans 3','Segoe UI',sans-serif;--radius:6px;--shadow-md:0 4px 18px rgba(5,32,88,0.12);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font-sans);color:var(--text);background:var(--off-white);font-size:16px;line-height:1.6;}
+    a{color:var(--navy);text-decoration:none;transition:color .2s;}a:hover{color:var(--gold);}
+    .page-hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,var(--navy-mid) 100%);color:var(--white);padding:44px 24px 36px;text-align:center;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse at 15% 60%,rgba(200,144,42,0.13) 0%,transparent 55%);pointer-events:none;}
+    .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);}
+    .page-hero-inner{position:relative;max-width:860px;margin:0 auto;}
+    .eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:10px;}
+    .page-hero h1{font-family:var(--font-serif);font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:700;line-height:1.2;margin-bottom:10px;}
+    .page-hero p{font-size:0.92rem;color:rgba(255,255,255,0.75);max-width:600px;margin:0 auto;}
+    /* JUMP NAV */
+    .jump-nav{background:var(--white);border-bottom:2px solid var(--gray-light);padding:8px 24px;position:sticky;top:0;z-index:100;box-shadow:0 1px 4px rgba(5,32,88,0.09);}
+    .jump-nav-inner{max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;gap:5px 6px;align-items:center;}
+    .jump-label{font-size:0.70rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray-mid);margin-right:4px;white-space:nowrap;}
+    .jump-nav a{font-size:0.76rem;font-weight:600;color:var(--navy);padding:3px 10px;border-radius:20px;border:1.5px solid var(--gray-light);transition:all .18s;white-space:nowrap;}
+    .jump-nav a:hover{background:var(--navy);color:var(--white);border-color:var(--navy);}
+    /* MAIN */
+    .page-main{max-width:960px;margin:0 auto;padding:28px 24px 60px;}
+    /* SECTION CARDS */
+    .club-section{margin-bottom:36px;background:var(--white);border-radius:10px;box-shadow:var(--shadow-md);overflow:hidden;}
+    .club-header{background:linear-gradient(90deg,var(--navy) 0%,var(--navy-mid) 100%);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .club-header h2{font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--white);}
+    .club-abbr{font-size:0.70rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-light);background:rgba(255,255,255,0.08);padding:3px 10px;border-radius:20px;border:1px solid rgba(200,144,42,0.4);white-space:nowrap;}
+    /* TROPHY CARDS */
+    .trophy-cards{padding:24px 24px 8px;}
+    .trophy-card{display:flex;gap:24px;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--gray-light);}
+    .trophy-card:last-child{border-bottom:none;margin-bottom:4px;}
+    .trophy-card-photo{flex:0 0 110px;text-align:center;}
+    .trophy-card-photo img{width:100%;max-width:110px;border-radius:var(--radius);box-shadow:0 2px 10px rgba(5,32,88,0.12);border:2px solid var(--gray-light);}
+    .trophy-card-photo .photo-placeholder{width:100px;height:130px;background:var(--off-white);border:2px dashed var(--gray-light);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--gray-mid);}
+    .trophy-card-body{flex:1;min-width:0;}
+    .trophy-card-body h3{font-family:var(--font-serif);font-size:1.02rem;font-weight:700;color:var(--navy-dark);margin-bottom:4px;}
+    .trophy-card-body .trophy-meta{font-size:0.74rem;font-weight:700;text-transform:uppercase;letter-spacing:0.10em;color:var(--gold);margin-bottom:10px;}
+    .trophy-card-body .trophy-desc{font-size:0.88rem;color:var(--gray-text);line-height:1.75;margin-bottom:10px;}
+    .trophy-card-body .trophy-desc em{font-style:italic;}
+    .trophy-card-body .trophy-desc a{color:var(--navy);text-decoration:underline;}
+    .trophy-card-body .trophy-desc strong{color:var(--navy-dark);}
+    .winners-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--navy);margin-bottom:6px;display:block;}
+    .winners-list{font-size:0.83rem;color:var(--text);line-height:1.9;column-count:2;column-gap:24px;}
+    .winners-list .no-win{color:var(--gray-mid);font-style:italic;}
+    .us-sailing-note{background:var(--off-white);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:10px 14px;margin:10px 0;font-size:0.82rem;color:var(--text);line-height:1.6;}
+    @media(max-width:600px){.trophy-card{flex-direction:column;}.winners-list{column-count:1;}.page-hero{padding:28px 16px 24px;}.trophy-cards{padding:16px;}}
+  </style>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="eyebrow">Barnegat Bay Yacht Racing Association</p>
+    <h1>Other Barnegat Bay Area Trophies</h1>
+    <p>US Sailing ladder eliminations, the Yachtswoman of the Year, Duckboat Championships, Sailfest, and other Barnegat Bay area awards.</p>
+  </div>
+</section>
+
+<nav class="jump-nav">
+  <div class="jump-nav-inner">
+    <span class="jump-label">Jump to:</span>
+    <a href="#ussailing-adult">US Sailing Adult</a>
+    <a href="#ussailing-junior">US Sailing Junior</a>
+    <a href="#yachtswoman">Yachtswoman</a>
+    <a href="#duckboat">Duckboat</a>
+    <a href="#sailfest">Sailfest</a>
+    <a href="#other">Other</a>
+  </div>
+</nav>
+
+<main class="page-main">
+
+  <!-- ══ US SAILING LADDER — ADULT ════════════════════════════════════ -->
+  <section class="club-section" id="ussailing-adult">
+    <div class="club-header"><h2>US Sailing Ladder &mdash; Adult Championships</h2><span class="club-abbr">BBYRA Eliminations</span></div>
+    <div class="trophy-cards">
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_adams.jpg" alt="Adams Trophy"/></div>
+        <div class="trophy-card-body">
+          <h3>Women&rsquo;s Championship Trophy &mdash; Adams Trophy</h3>
+          <p class="trophy-meta">BBYRA Elimination &mdash; US Sailing Women&rsquo;s Championship</p>
+          <div class="us-sailing-note">Awarded to the winner of the BBYRA elimination leading to the US Sailing Women&rsquo;s Championship (Mrs. Charles Francis Adams Trophy). Awarded when two or more competitors enter; if only one competitor enters the BBYRA elimination and represents BBYRA in the Area C Semifinal, the trophy and flag are still awarded.</div>
+          <p class="trophy-desc">Jan C. O&rsquo;Malley of MYC won the national championship in 1969 and 1970. Debbie Freeman&rsquo;s crew of BYC won the nationals in 1974, and Betsy Gelenitis&rsquo;s MCYC crew won in 1984. Cynthia B. Wesson was the first Area C champion in 1975 and went on to win the national title in 1977. The elimination was not held from 1993 through 2004 and again from 2006 through 2015.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2006&ndash;2015 &mdash; No BBYRA Entry<br>
+          2005 &mdash; Jenn Durrua, MCYC <small>(4th Area C)</small><br>
+          1993&ndash;2004 &mdash; No Entry<br>
+          1992 &mdash; Jan C. O&rsquo;Malley, MYC<br>
+          1991 &mdash; Ginny White<br>
+          1990 &mdash; Chris Wight<br>
+          1989 &mdash; Jill L. Ivin<br>
+          1988 &mdash; Linda L. Schmicker, IHYC<br>
+          1987 &mdash; Susan Pfeiffer<br>
+          1986 &mdash; Linda L. Schmicker, IHYC<br>
+          1985 &mdash; Linda L. Schmicker, IHYC<br>
+          1984 &mdash; Betsy Gelenitis / Ellen Reago / Linda Taboada / Patti Jeskie, MCYC <small>(National Champion)</small><br>
+          1983 &mdash; Susan Summerill, TRYC<br>
+          1982 &mdash; Susan Summerill, TRYC<br>
+          1981 &mdash; Susan Summerill, TRYC<br>
+          1980 &mdash; Mimi Dimon, MCYC<br>
+          1979 &mdash; Mimi Dimon, MCYC<br>
+          1978 &mdash; Betsy Gelenitis, MCYC<br>
+          1977 &mdash; Cynthia B. Wesson, MYC <small>(1st National Champion)</small><br>
+          1976 &mdash; Nancy Simpson, BHYC <small>(1st Area C)</small><br>
+          1975 &mdash; Cynthia B. Wesson, MYC <small>(1st Area C)</small><br>
+          1974 &mdash; Debbie Freeman / Lynn Campbell / Jennifer Valdes, BYC <small>(National Champion)</small><br>
+          1973 &mdash; Gail W. Dunn<br>
+          1972 &mdash; Debbie Freeman, BYC<br>
+          1971 &mdash; Jan C. O&rsquo;Malley, MYC <small>(2nd in final)</small><br>
+          1970 &mdash; Jan C. O&rsquo;Malley / Patricia O&rsquo;Malley / Connie Blaise, MYC <small>(National Champion)</small><br>
+          1969 &mdash; Jan C. O&rsquo;Malley / Patricia O&rsquo;Malley / Jacqueline Hart, MYC <small>(National Champion)</small><br>
+          1968 &mdash; Tay Adams<br>
+          1967 &mdash; Constance Pilling, MYC<br>
+          1966 &mdash; Susan Doscher<br>
+          1965 &mdash; Jan Chance, MYC<br>
+          1964 &mdash; Bonnie Wiencke, BYC<br>
+          1963 &mdash; Bonnie Wiencke, BYC<br>
+          1962 &mdash; Record not available<br>
+          1961 &mdash; Carel Polch, BHYC
+        </div>
+        </div>
+      </div>
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_mallory.jpg" alt="Mallory Cup Trophy"/></div>
+        <div class="trophy-card-body">
+          <h3>Men&rsquo;s Championship Trophy &mdash; Mallory Cup</h3>
+          <p class="trophy-meta">BBYRA Elimination &mdash; US Sailing Men&rsquo;s Championship</p>
+          <div class="us-sailing-note">Awarded to the winner of the BBYRA elimination leading to the US Sailing Men&rsquo;s Sailing Championship (Clifford D. Mallory Cup).</div>
+          <p class="trophy-desc">Cliff Campbell of TRYC won the national championship in 1967. Paul Gelenitis of MCYC dominated the elimination, winning 14 times. Keith Taboada finished 2nd in the 2003 national final. No BBYRA entry from 2006 through 2023.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2006&ndash;2023 &mdash; No BBYRA Entry<br>
+          2005 &mdash; William Demand, TRYC <small>(3rd Area C)</small><br>
+          2004 &mdash; Mitch Hnatt, MCYC <small>(5th in final)</small><br>
+          2003 &mdash; Keith Taboada, MCYC <small>(2nd in final)</small><br>
+          2002 &mdash; Record not available<br>
+          2001 &mdash; Paul Gelenitis, MCYC<br>
+          2000 &mdash; Record not available<br>
+          1999 &mdash; Paul Gelenitis, MCYC<br>
+          1998 &mdash; George B. Francis, MCYC<br>
+          1997 &mdash; Paul Gelenitis, MCYC<br>
+          1996 &mdash; Paul Gelenitis, MCYC<br>
+          1995 &mdash; George B. Francis, MCYC<br>
+          1994 &mdash; Warren Furie<br>
+          1993 &mdash; Paul Gelenitis, MCYC<br>
+          1992 &mdash; Paul Gelenitis, MCYC<br>
+          1991 &mdash; Record not available<br>
+          1990 &mdash; Paul Gelenitis, MCYC<br>
+          1989 &mdash; Keith Taboada, MCYC<br>
+          1988 &mdash; Paul Gelenitis, MCYC<br>
+          1987 &mdash; Stuart Challoner, MCYC<br>
+          1986 &mdash; Paul Gelenitis, MCYC<br>
+          1985 &mdash; Michael Fortenbaugh, BHYC<br>
+          1984 &mdash; Cliff Campbell, TRYC<br>
+          1983 &mdash; Paul Gelenitis, MCYC<br>
+          1982 &mdash; Allan Terhune, TRYC<br>
+          1981 &mdash; Alan Ruiter, MCYC <small>(7th in final)</small><br>
+          1980 &mdash; Alan Ruiter, MCYC <small>(2nd Area C)</small><br>
+          1979 &mdash; Jay Lutz, MCYC <small>(3rd in final)</small><br>
+          1978 &mdash; Jim Carson, MCYC <small>(7th in final)</small><br>
+          1977 &mdash; Richard Wight, MYC <small>(1st Area C)</small><br>
+          1976 &mdash; Jon Wright, MYC<br>
+          1975 &mdash; Jim Carson, MCYC<br>
+          1974 &mdash; Richard Wight, MYC <small>(2nd in final)</small><br>
+          1973 &mdash; Buzz Reynolds<br>
+          1972 &mdash; Gardner Cox, MYC<br>
+          1971 &mdash; Runyon Colie Jr., MYC <small>(3rd in final)</small><br>
+          1970 &mdash; Runyon Colie Jr., MYC<br>
+          1969 &mdash; Gardner Cox, MYC <small>(4th in final)</small><br>
+          1968 &mdash; Samuel Fortenbaugh III<br>
+          1967 &mdash; Cliff Campbell / Howard Wright / Ann Campbell, TRYC <small>(National Champion)</small><br>
+          1966 &mdash; Richard Wight, MYC<br>
+          1965 &mdash; David Siddons, IHYC<br>
+          1964 &mdash; Record not available<br>
+          1963 &mdash; Art Lange, LYC<br>
+          1962 &mdash; Gardner Cox, MYC<br>
+          1961 &mdash; Bob Adams, BHYC<br>
+          1956&ndash;1960 &mdash; Records not available<br>
+          1955 &mdash; Jim Carson, MCYC
+        </div>
+        </div>
+      </div>
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_oday.jpg" alt="O'Day Trophy"/></div>
+        <div class="trophy-card-body">
+          <h3>Single Handed Championship &mdash; O&rsquo;Day Trophy</h3>
+          <p class="trophy-meta">BBYRA Elimination &mdash; US Sailing Single Handed Championship</p>
+          <div class="us-sailing-note">Awarded to the winner of the BBYRA elimination leading to the US Sailing Single Handed Championship (George D. O&rsquo;Day Trophy). Donated by Dick &amp; Sophie Terhune, TRYC.</div>
+          <p class="trophy-desc">Shawn Kempton of OGYC won the national championship three times (1975, 1978, 1980). Peter Hurley of MYC won the nationals in 1993. Clay Johnson of TRYC won the nationals in 2001 and 2013. Jim Reynolds of IHYC won the nationals in 1976.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2015 &mdash; Clay Johnson, TRYC<br>
+          2014 &mdash; No BBYRA entry<br>
+          2013 &mdash; Clay Johnson, TRYC <small>(1st in final)</small><br>
+          2012 &mdash; Joseph Paggi, OGYC <small>(11th in final)</small><br>
+          2011 &mdash; Ken Griswold<br>
+          2010 &mdash; No BBYRA entry<br>
+          2009 &mdash; Peter Hurley, MYC <small>(7th in final)</small><br>
+          2008 &mdash; No BBYRA entry<br>
+          2007 &mdash; Kyle Rogachenko, TRYC <small>(1st in final)</small><br>
+          2006 &mdash; Glen Dickson, BHYC <small>(10th in final)</small><br>
+          2005 &mdash; Reed Johnson, TRYC <small>(2nd in final)</small><br>
+          2004 &mdash; Glen Dickson, BHYC <small>(7th in final)</small><br>
+          2003 &mdash; Reed Johnson, TRYC<br>
+          1994&ndash;2002 &mdash; Records not available<br>
+          1993 &mdash; Peter Hurley, MYC <small>(National Champion)</small><br>
+          1991&ndash;1992 &mdash; Records not available<br>
+          1990 &mdash; Philip Reynolds, IHYC<br>
+          1989 &mdash; Philip Reynolds, IHYC<br>
+          1988 &mdash; Michael Plosica, LYC<br>
+          1987 &mdash; Bill Thomas, MYC<br>
+          1986 &mdash; Chris Norman, MRYC<br>
+          1985 &mdash; Peter Fortenbaugh, BHYC<br>
+          1984 &mdash; Paul Magno, LYC<br>
+          1983 &mdash; Jody Lutz, MCYC<br>
+          1982 &mdash; Record not available<br>
+          1981 &mdash; Phil Karcher, LYC<br>
+          1980 &mdash; Shawn Kempton, OGYC <small>(National Champion)</small><br>
+          1979 &mdash; Terry Kempton, TRYC<br>
+          1978 &mdash; Shawn Kempton, OGYC <small>(National Champion)</small><br>
+          1977 &mdash; Record not available<br>
+          1976 &mdash; Jim Reynolds, IHYC <small>(National Champion)</small><br>
+          1975 &mdash; Shawn Kempton, OGYC<br>
+          1974 &mdash; Charles Horter, IHYC<br>
+          1973 &mdash; Buzz Reynolds, IHYC<br>
+          1972 &mdash; Henry Bossett, MYC<br>
+          1971 &mdash; Mike Heinrich Jr., MRYC<br>
+          1970 &mdash; Murray Barton, MYC<br>
+          1969 &mdash; Tom Barton, MYC<br>
+          1968 &mdash; Sede Molenkopf, MYC<br>
+          1967 &mdash; Record not available<br>
+          1966 &mdash; Robert Hyde<br>
+          1965 &mdash; Bruce Badeau, BHYC<br>
+          1964 &mdash; Record not available<br>
+          1963 &mdash; F. Schoettle<br>
+          1962 &mdash; Peter Jones<br>
+          1961 &mdash; Record not available
+        </div>
+        </div>
+      </div>
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+        <div class="trophy-card-body">
+          <h3>Disabled Sailing Championship &mdash; Independence Cup</h3>
+          <p class="trophy-meta">BBYRA Elimination &mdash; US Independence Cup North American Challenge</p>
+          <div class="us-sailing-note">Awarded to the winner of the BBYRA elimination leading to the US Independence Cup North American Challenge.</div>
+          <p class="trophy-desc">Only one recorded year in the archive.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2006 &mdash; Bill Donahue, SAYC <small>(3rd at US Championship)</small>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ US SAILING LADDER — JUNIOR ═══════════════════════════════════ -->
+  <section class="club-section" id="ussailing-junior">
+    <div class="club-header"><h2>US Sailing Ladder &mdash; Junior Championships</h2><span class="club-abbr">BBYRA Eliminations</span></div>
+    <div class="trophy-cards">
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_sears.jpg" alt="Sears Cup"/></div>
+        <div class="trophy-card-body">
+          <h3>Junior Triple Handed Championship &mdash; Sears Cup</h3>
+          <p class="trophy-meta">BBYRA Elimination &mdash; US Sailing Junior Triple Handed Championship</p>
+          <div class="us-sailing-note">Awarded to the winner of the BBYRA elimination leading to the US Sailing Junior Triple Handed Championship (Sears Cup). &#42; 2007: Trophy not awarded &mdash; no sail-off held in BBYRA waters.</div>
+          <p class="trophy-desc">Allan Terhune Jr. of TRYC won the national championship in 1995 and won the BBYRA elimination four consecutive years (1993&ndash;1996). Craig J. Dooren of MCYC won the Area C championship in 1986 and 1987. Matt Schon&rsquo;s MCYC crew finished 2nd in Area C in 2004.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2013&ndash;2015 &mdash; No BBYRA entry<br>
+          2012 &mdash; Jack Gerhi<br>
+          2009&ndash;2011 &mdash; No BBYRA entry<br>
+          2008 &mdash; Dylan Froriep / Michael DeNigris / Ryan Silva<br>
+          2007 &mdash; Dave Reynolds, IHYC &#42;<br>
+          2006 &mdash; Blair Davis, LYC<br>
+          2005 &mdash; No entry<br>
+          2004 &mdash; Matt Schon / Tara Schon / Mike Crann / Whiting Stultz, MCYC <small>(2nd Area C)</small><br>
+          2003 &mdash; Todd Reynolds, IHYC<br>
+          2002 &mdash; Record not available<br>
+          1999&ndash;2001 &mdash; Records not available<br>
+          1998 &mdash; Ryan Bradley, MCYC<br>
+          1997 &mdash; Ryan Bradley, MCYC<br>
+          1996 &mdash; Allan Terhune Jr., TRYC<br>
+          1995 &mdash; Allan Terhune Jr. / Coury Yetman / Ronald Vignone, TRYC <small>(National Champion)</small><br>
+          1994 &mdash; Allan Terhune Jr., TRYC<br>
+          1993 &mdash; Allan Terhune Jr., TRYC<br>
+          1992 &mdash; Stan Schreyer, LYC<br>
+          1991 &mdash; Philip Barow, MCYC<br>
+          1990 &mdash; Jonathan Zwarg <small>(Area C Winner)</small><br>
+          1989 &mdash; Joseph Buczkowski, MCYC<br>
+          1988 &mdash; Jenny Nelson, IHYC<br>
+          1987 &mdash; Craig J. Dooren, MCYC <small>(Area C Winner)</small><br>
+          1986 &mdash; Craig J. Dooren, MCYC <small>(Area C Winner)</small><br>
+          1985 &mdash; J. Glen Dickson, BHYC<br>
+          1984 &mdash; Sarah Dunn, MRYC<br>
+          1983 &mdash; Richard Morrison, IHYC <small>(1st Area C)</small><br>
+          1982 &mdash; Richard Morrison, IHYC<br>
+          1981 &mdash; Keith Taboada, MCYC<br>
+          1980 &mdash; Keith Taboada, MCYC<br>
+          1979 &mdash; Michael Fortenbaugh, BHYC<br>
+          1978 &mdash; Michael Fortenbaugh, BHYC<br>
+          1977 &mdash; Russell Lucas, BHYC <small>(2nd in final)</small><br>
+          1976 &mdash; Jenny Adams, BHYC<br>
+          1975 &mdash; Jay Lutz, MCYC <small>(2nd in final)</small><br>
+          1974 &mdash; Jeff Lewis, MYC<br>
+          1973 &mdash; Mark Beaton, MCYC<br>
+          1972 &mdash; Buzz Reynolds, IHYC<br>
+          1971 &mdash; Doug Broeker, LYC<br>
+          1970 &mdash; Harry Brick, IHYC<br>
+          1969 &mdash; Harry Brick, IHYC<br>
+          1968 &mdash; Bill Cramer, MCYC / RYC<br>
+          1967 &mdash; Tad LaFountain, BHYC<br>
+          1966 &mdash; Hansi Bonn, LYC<br>
+          1965 &mdash; Douglas Schwarz, MRYC<br>
+          1964 &mdash; Record not available<br>
+          1963 &mdash; Bruce Badeau, MYC<br>
+          1962 &mdash; Record not available<br>
+          1961 &mdash; William Schwalje / Dot Schwalje / Larry Warter, NBYC
+        </div>
+        </div>
+      </div>
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_bemis.jpg" alt="Bemis Trophy"/></div>
+        <div class="trophy-card-body">
+          <h3>Junior Double Handed Championship &mdash; F. Gregg Bemis Trophy</h3>
+          <p class="trophy-meta">BBYRA Elimination &mdash; US Sailing Junior Double Handed Championship</p>
+          <div class="us-sailing-note">Awarded to the winner of the BBYRA elimination leading to the US Sailing Junior Double Handed Championship (F. Gregg Bemis Trophy).</div>
+          <p class="trophy-desc">Sam Williams of BHYC finished 2nd in the 2006 national finals in a point tie for first. The Mergenthaler siblings of MRYC won three consecutive years (2000&ndash;2002). No race in 2020 due to COVID-19.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2020 &mdash; No Race &mdash; COVID-19<br>
+          2018 &mdash; Colleen O&rsquo;Brien / Michaela O&rsquo;Brien, BHYC<br>
+          2017 &mdash; Sarah Burn, BHYC / Patricia Gerli, MYC<br>
+          2016 &mdash; Record not available<br>
+          2010&ndash;2014 &mdash; No BBYRA entry<br>
+          2009 &mdash; Will Fischer &amp; Kevin Fischer, MYC<br>
+          2008 &mdash; Will Fischer &amp; Kevin Fischer, MYC<br>
+          2007 &mdash; Bernie Roesler &amp; Bianca Rom, TRYC / David Kerr &amp; George Iverson, BHYC<br>
+          2006 &mdash; Sam Williams, BHYC <small>(2nd in finals &mdash; point tie for 1st)</small><br>
+          2005 &mdash; John Kempton &amp; Molly Lucas, IHYC <small>(4th in finals)</small><br>
+          2004 &mdash; John Kempton &amp; Molly Lucas, IHYC <small>(3rd Area C)</small><br>
+          2003 &mdash; Tom &amp; Gerry Tullo, TRYC<br>
+          2002 &mdash; Marc Sorbo &amp; Becky Mergenthaler, MRYC<br>
+          2001 &mdash; Graham &amp; Becky Mergenthaler, MRYC<br>
+          2000 &mdash; Marc Sorbo &amp; Becky Mergenthaler, MRYC<br>
+          1999 &mdash; Chris Ashley &amp; Heather Switlik, BHYC<br>
+          1998 &mdash; Tom Allison, IHYC<br>
+          1997 &mdash; Jen Spark &amp; Heather Switlik, MYC<br>
+          1996 &mdash; Jen Spark &amp; Heather Switlik, MYC<br>
+          1995 &mdash; Casy Yetman, IHYC<br>
+          1994 &mdash; Shane Grenley, IHYC<br>
+          1993 &mdash; Amy Rosenfeld, IHYC <small>(Sportsmanship Award at Finals)</small><br>
+          1992 &mdash; Dwyer Schmierer, MYC<br>
+          1991 &mdash; Joe Buczkowski, MCYC<br>
+          1990 &mdash; Matthew Lederer, BHYC<br>
+          1989 &mdash; Jason Smith, MCYC<br>
+          1988 &mdash; Record not available<br>
+          1987 &mdash; Jack S. Whitman, MCYC<br>
+          1986 &mdash; Record not available<br>
+          1985 &mdash; Alan Taboada, MCYC<br>
+          1984 &mdash; Peter Hurley, MYC<br>
+          1983 &mdash; Peter Fortenbaugh, BHYC<br>
+          1982 &mdash; Betsy Lucas, BHYC<br>
+          1981 &mdash; Debbie Harkrader, BHYC<br>
+          1980 &mdash; Sue Summerill, TRYC<br>
+          1979 &mdash; Nancy Lucas, BHYC<br>
+          1978 &mdash; Chuck Ryant, LYC<br>
+          1977 &mdash; Will Berson, LYC<br>
+          1976 &mdash; Michael Frankovich, BHYC<br>
+          1975 &mdash; Tom Lintner, MRYC
+        </div>
+        </div>
+      </div>
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/bb_smythe.jpg" alt="Smythe Trophy"/></div>
+        <div class="trophy-card-body">
+          <h3>Junior Single Handed Championship &mdash; D. Verner Smythe Trophy</h3>
+          <p class="trophy-meta">BBYRA Elimination &mdash; US Sailing Junior Single Handed Championship</p>
+          <div class="us-sailing-note">Awarded to the winner of the BBYRA elimination leading to the US Sailing Junior Single Handed Championship (D. Verner Smythe Trophy).</div>
+          <p class="trophy-desc">Clay Johnson of TRYC won the national championship in 2001 and won the BBYRA elimination six consecutive years (1998&ndash;2003). Shawn Kempton of OGYC won the nationals in 1975. Kevin Kempton won the Area C in 1976. No race in 2020 due to COVID-19.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2020 &mdash; No Race &mdash; COVID-19<br>
+          2019 &mdash; Teddy Martin, TRYC<br>
+          2018 &mdash; No entry<br>
+          2017 &mdash; Thomas Quinn, BHYC<br>
+          2016 &mdash; Record not available<br>
+          2015 &mdash; Alex Fasolu<br>
+          2014 &mdash; Nick Brady, IHYC<br>
+          2013 &mdash; Record not available<br>
+          2012 &mdash; Jeffrey Glossinger<br>
+          2011 &mdash; Haley Kardek, MCYC<br>
+          2010 &mdash; Ryan Bailey, IHYC<br>
+          2009 &mdash; Dylan Finnerman, TRYC<br>
+          2008 &mdash; Arthur S. Bailey, IHYC<br>
+          2007 &mdash; Arthur S. Bailey, IHYC / Kevin Kempton, OGYC <small>(17th nationals)</small><br>
+          2006 &mdash; Tod Reynolds, IHYC<br>
+          2005 &mdash; Eric Horrocks, IHYC <small>(16th in finals)</small><br>
+          2004 &mdash; Eric Horrocks, LYC <small>(3rd Area C)</small><br>
+          2003 &mdash; Reed Johnson, TRYC<br>
+          2002 &mdash; Clay Johnson, TRYC<br>
+          2001 &mdash; Clay Johnson, TRYC <small>(National Champion)</small><br>
+          2000 &mdash; Clay Johnson, TRYC<br>
+          1999 &mdash; Clay Johnson, TRYC<br>
+          1998 &mdash; Clay Johnson, TRYC<br>
+          1997 &mdash; Record not available<br>
+          1996 &mdash; Ian Larson<br>
+          1995 &mdash; Ian Larson<br>
+          1994 &mdash; Bill Demand, TRYC<br>
+          1993 &mdash; Travis Weisleder, BHYC<br>
+          1992 &mdash; Jon Zwarg, IHYC<br>
+          1991 &mdash; Record not available<br>
+          1990 &mdash; Bill Warner, TRYC<br>
+          1989 &mdash; Bill Warner, TRYC<br>
+          1988 &mdash; Record not available<br>
+          1987 &mdash; Mark Nelson, IHYC<br>
+          1986 &mdash; Richard Foster, BYC<br>
+          1985 &mdash; David Wright, MYC<br>
+          1984 &mdash; David Blundin, BHYC<br>
+          1983 &mdash; Brian Taboada, MCYC <small>(2nd in final)</small><br>
+          1982 &mdash; Brian Taboada, MCYC<br>
+          1981 &mdash; Peter Van Duyne, MYC<br>
+          1980 &mdash; Carson Smith, TRYC<br>
+          1979 &mdash; Carson Smith, TRYC<br>
+          1978 &mdash; Tripper McShane, MYC<br>
+          1977 &mdash; Kevin Kempton, OGYC<br>
+          1976 &mdash; Kevin Kempton, OGYC <small>(Area C Winner)</small><br>
+          1975 &mdash; Shawn Kempton, OGYC <small>(National Champion)</small>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ YACHTSWOMAN OF THE YEAR ══════════════════════════════════════ -->
+  <section class="club-section" id="yachtswoman">
+    <div class="club-header"><h2>Yachtswoman of the Year</h2><span class="club-abbr">TRYC</span></div>
+    <div class="trophy-cards">
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/tr_vRead.jpg" alt="Virginia Read Memorial Trophy"/></div>
+        <div class="trophy-card-body">
+          <h3>Virginia Read Memorial Trophy</h3>
+          <p class="trophy-meta">Yachtswoman of the Year &mdash; Toms River Yacht Club</p>
+          <p class="trophy-desc">The Yachtswoman of the Year shall be selected for her outstanding service, achievements, participation in, contribution to, and promotion of the sport of sailing in the Barnegat Bay area. Said qualifications may have been over a protracted period of time. Eligibility is limited to female participants of the Ocean County College sailing program and members of BBYRA member yacht clubs. Qualified candidates may be eligible posthumously. Nominations are submitted in writing to the Fleet Captain of Toms River Yacht Club no later than Labor Day. The perpetual trophy is a bowl hand painted by Stephen P. Weston in 2005.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2013 &mdash; Mimi Dimon, MCYC<br>
+          2009 &mdash; Charlotte Roselli, PBYC<br>
+          2008 &mdash; Patty Applegate, LYC / TRYC<br>
+          2007 &mdash; Betty Jane France, SAYC<br>
+          2006 &mdash; Mary Jo Campbell, TRYC<br>
+          2005 &mdash; Alicemay Weber-Wright, TRYC
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ DUCKBOAT ══════════════════════════════════════════════════════ -->
+  <section class="club-section" id="duckboat">
+    <div class="club-header"><h2>World Duckboat Championships</h2><span class="club-abbr">Barnegat Bay</span></div>
+    <div class="trophy-cards">
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/oth_duckboat.jpg" alt="World Duckboat Championship Trophy"/></div>
+        <div class="trophy-card-body">
+          <h3>World Duckboat Championship &mdash; Perpetual Trophy</h3>
+          <p class="trophy-meta">World Duckboat Championship &mdash; Overall Winner</p>
+          <p class="trophy-desc">The World Duckboat Perpetual Trophy is awarded to the overall winner of the annual World Duckboat Championship on Barnegat Bay. Russell Lucas of BHYC won the championship nine times, making him the most dominant champion in the event&rsquo;s history. Jan O&rsquo;Malley of MYC aboard <em>Myth O&rsquo;Manto</em> won three consecutive years (1986&ndash;1988). A documentary about the event was produced by Peter Slack: <a href="https://www.youtube.com/watch?v=JwR-glhiHv0" target="_blank" rel="noopener">Watch on YouTube</a>.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2021 &mdash; Peter Commette<br>
+          2020 &mdash; Record not available<br>
+          2019 &mdash; <em>Double Duck A</em> &mdash; Colleen O&rsquo;Brien, BHYC<br>
+          2018 &mdash; <em>Double Duck A</em> &mdash; Colleen O&rsquo;Brien, BHYC<br>
+          2017 &mdash; Record not available<br>
+          2016 &mdash; Carter Pearc, Tuckerton<br>
+          2015 &mdash; T11 &mdash; Jack Brown, TRYC<br>
+          2014 &mdash; Record not available<br>
+          2013 &mdash; M6 &mdash; Jon Wright, CYC Philadelphia<br>
+          2012 &mdash; Record not available<br>
+          2011 &mdash; BH8 &mdash; Molly Lucas, BHYC<br>
+          2010 &mdash; BH8 &mdash; Andy Goetting, BHYC<br>
+          2009 &mdash; BH8 &mdash; Russ Lucas, BHYC<br>
+          2008 &mdash; Betsy Gelenitis Allison, MCYC<br>
+          2007 &mdash; <em>Big Ben</em> &mdash; Joseph Paggi, OGYC<br>
+          2006 &mdash; Nick Paggi, OGYC<br>
+          2005 &mdash; <em>Slicker</em> &mdash; Russell Lucas, BHYC<br>
+          2004 &mdash; <em>Slicker</em> &mdash; Russell Lucas, BHYC<br>
+          2003 &mdash; <em>Yard Bird</em> &mdash; Mark Beaton<br>
+          2002 &mdash; <em>Yard Bird</em> &mdash; Mark Beaton<br>
+          2001 &mdash; <em>Sabre</em> &mdash; Peter Chance<br>
+          2000 &mdash; <em>Slicker</em> &mdash; Russell Lucas, BHYC<br>
+          1999 &mdash; <em>Pinfeather</em> &mdash; Stuart Tubs<br>
+          1998 &mdash; <em>Pepper</em> &mdash; Amy deCamp<br>
+          1997 &mdash; <em>Slicker</em> &mdash; Russell Lucas, BHYC<br>
+          1996 &mdash; <em>Slicker</em> &mdash; Russell Lucas, BHYC<br>
+          1995 &mdash; <em>Sarah Duckhardt</em> &mdash; Glen Dickson<br>
+          1994 &mdash; <em>Pepper</em> &mdash; Amy deCamp<br>
+          1993 &mdash; <em>Slicker</em> &mdash; Russell Lucas, BHYC<br>
+          1992 &mdash; <em>Daisy</em> &mdash; Russell Lucas, BHYC<br>
+          1991 &mdash; <em>Rose</em> &mdash; Peter Wright<br>
+          1990 &mdash; <em>Daisy</em> &mdash; Russell Lucas, BHYC<br>
+          1989 &mdash; <em>Sabre</em> &mdash; Peter Chance<br>
+          1988 &mdash; <em>Myth O&rsquo;Manto</em> &mdash; Jan O&rsquo;Malley, MYC<br>
+          1987 &mdash; <em>Myth O&rsquo;Manto</em> &mdash; Jan O&rsquo;Malley, MYC<br>
+          1986 &mdash; <em>Myth O&rsquo;Manto</em> &mdash; Jan O&rsquo;Malley, MYC<br>
+          1985 &mdash; <em>Breezy</em> &mdash; Peter Hurley
+        </div>
+        </div>
+      </div>
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/oth_duckboatJr.jpg" alt="Phil Clark Trophy"/></div>
+        <div class="trophy-card-body">
+          <h3>The Phil Clark Trophy &mdash; Top Junior</h3>
+          <p class="trophy-meta">World Duckboat Championship &mdash; Top Junior Finisher</p>
+          <p class="trophy-desc">The Phil Clark Trophy is awarded to the top junior finisher at the World Duckboat Championship. Joseph Paggi of OGYC won back-to-back in 2007 and 2008 aboard <em>Big Ben</em>. Devin Weisleder won consecutively in 1993 and 1994.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2021 &mdash; Harrison Szot, TRSS<br>
+          2020 &mdash; Record not available<br>
+          2019 &mdash; <em>Blind Duck</em> T37 &mdash; James Kopack, TRYC<br>
+          2018 &mdash; Record not available<br>
+          2017 &mdash; <em>Double Duck A</em> &mdash; Colleen O&rsquo;Brien, BHYC<br>
+          2016 &mdash; Mitchell Quinn<br>
+          2015 &mdash; <em>Slicker</em> &mdash; Michaela O&rsquo;Brien, BHYC<br>
+          2014 &mdash; Jack Brown, SPYC<br>
+          2013 &mdash; SS1 &mdash; Jack Brown, SPYC<br>
+          2012 &mdash; Elizabeth Migon<br>
+          2011 &mdash; OG542 &mdash; Doug Jensen, OGYC<br>
+          2010 &mdash; 50 &mdash; Elizabeth Tell, BHYC<br>
+          2009 &mdash; OG542 &mdash; Charlie Nunn, OGYC<br>
+          2008 &mdash; <em>Big Ben</em> &mdash; Joseph Paggi, OGYC<br>
+          2007 &mdash; <em>Big Ben</em> &mdash; Joseph Paggi, OGYC<br>
+          2006 &mdash; Kevin Kempton / Mitchell Nunn, OGYC<br>
+          2005 &mdash; 1889 &mdash; Patrick Mignon / Grace Lucas, BHYC<br>
+          2004 &mdash; Sam Williams / Sarah Williams, BHYC<br>
+          2003 &mdash; Dan Liberty / Cory Smith<br>
+          2002 &mdash; Dan Liberty / Bernie Roesler<br>
+          2001 &mdash; Randy Hartranft / Alec Bunt, OGYC<br>
+          2000 &mdash; L. Kempton / S. Mease, OGYC<br>
+          1999 &mdash; Carrie Lewis<br>
+          1998 &mdash; Bobby Koar<br>
+          1997 &mdash; Kimberly Harding<br>
+          1996 &mdash; Heather Switlik<br>
+          1995 &mdash; Kippy Durling<br>
+          1994 &mdash; Devin Weisleder<br>
+          1993 &mdash; Devin Weisleder
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ SAILFEST ══════════════════════════════════════════════════════ -->
+  <section class="club-section" id="sailfest">
+    <div class="club-header"><h2>Sailfest &mdash; Rotary Club of Toms River</h2><span class="club-abbr">Toms River</span></div>
+    <div class="trophy-cards">
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/oth_sailfestPHRF.jpg" alt="Sailfest Cup"/></div>
+        <div class="trophy-card-body">
+          <h3>Sailfest Cup</h3>
+          <p class="trophy-meta">PHRF Fleet &mdash; Sailfest Overall Winner</p>
+          <p class="trophy-desc">Handcrafted in solid silver, the Sailfest Cup is presented annually to the overall winner in the PHRF fleet, whose name is engraved on the base and displayed at the vessel&rsquo;s home port. Paul Gelenitis won back-to-back in 2004 and 2005 aboard <em>Gambello</em>.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2009 &mdash; <em>Moe Foe</em> &mdash; Don Major<br>
+          2008 &mdash; <em>Shadowlight</em> &mdash; Wayne Bush<br>
+          2007 &mdash; <em>Bob Cat</em> &mdash; Byron Hicks<br>
+          2006 &mdash; <em>Dash</em> &mdash; Roy Kraus<br>
+          2005 &mdash; <em>Gambello</em> &mdash; Paul Gelenitis, MCYC<br>
+          2004 &mdash; <em>Gambello</em> &mdash; Paul Gelenitis, MCYC
+        </div>
+        </div>
+      </div>
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/oth_sailfestAcat.jpg" alt="Governor's Cup Trophy"/></div>
+        <div class="trophy-card-body">
+          <h3>Governor&rsquo;s Cup Trophy</h3>
+          <p class="trophy-meta">A Cat Fleet &mdash; Sailfest Series Winner</p>
+          <p class="trophy-desc">A hand crafted, glass encased A Cat model made by Bill Yanovich and donated by the Rotary Club, is presented to the winner of the A Cat class at Sailfest. Ed Vienckowski won five consecutive years (1995&ndash;1999) aboard <em>Ghost</em>. Brian Gabrial of IHYC won three straight years (2008&ndash;2010) aboard <em>Lotus</em>.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2022 &mdash; <em>Witch</em> &mdash; TRYC<br>
+          2021 &mdash; <em>Spyder</em> &mdash; TRYC<br>
+          2012&ndash;2020 &mdash; Records not available<br>
+          2011 &mdash; <em>Raven</em> &mdash; Pete Stagaard, MCYC<br>
+          2010 &mdash; <em>Lotus</em> &mdash; Brian Gabrial, IHYC<br>
+          2009 &mdash; <em>Lotus</em> &mdash; Brian Gabrial, IHYC<br>
+          2008 &mdash; <em>Lotus</em> &mdash; Brian Gabrial, IHYC<br>
+          2007 &mdash; <em>Lotus</em> &mdash; Chip Hillyer, IHYC<br>
+          2006 &mdash; <em>Raven</em> &mdash; MCYC<br>
+          2005 &mdash; <em>Ghost</em> &mdash; Dan Crabbe, BHYC<br>
+          2004 &mdash; <em>Ghost</em> &mdash; Dan Crabbe, BHYC<br>
+          2003 &mdash; <em>Witch</em> &mdash; Austin Fragomen, BHYC<br>
+          2002 &mdash; <em>Vapor</em> &mdash; Peter Wright<br>
+          2001 &mdash; <em>Wasp</em> &mdash; Will Demand<br>
+          2000 &mdash; <em>Bat</em> &mdash; Richard Yetman<br>
+          1999 &mdash; <em>Ghost</em> &mdash; Ed Vienckowski<br>
+          1998 &mdash; <em>Ghost</em> &mdash; Ed Vienckowski<br>
+          1997 &mdash; <em>Ghost</em> &mdash; Ed Vienckowski<br>
+          1996 &mdash; <em>Ghost</em> &mdash; Ed Vienckowski<br>
+          1995 &mdash; <em>Ghost</em> &mdash; Ed Vienckowski
+        </div>
+        </div>
+      </div>
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/oth_sailfestHS.jpg" alt="Interscholastic Trophy"/></div>
+        <div class="trophy-card-body">
+          <h3>Interscholastic Trophy</h3>
+          <p class="trophy-meta">High School Team Challenge &mdash; Sailfest</p>
+          <p class="trophy-desc">The Interscholastic Trophy is awarded to the winning high school team at the Sailfest High School Team Challenge. Monsignor Donovan High School won in all three recorded years.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2010 &mdash; Monsignor Donovan High School<br>
+          2007&ndash;2009 &mdash; Records not available<br>
+          2006 &mdash; Monsignor Donovan High School<br>
+          2005 &mdash; Monsignor Donovan High School
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ OTHER ═════════════════════════════════════════════════════════ -->
+  <section class="club-section" id="other">
+    <div class="club-header"><h2>Other Barnegat Bay Area Awards</h2><span class="club-abbr">Various</span></div>
+    <div class="trophy-cards">
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/oth_beckettBucket.jpg" alt="Beckett's Bucket"/></div>
+        <div class="trophy-card-body">
+          <h3>Beckett&rsquo;s Bucket</h3>
+          <p class="trophy-meta">A Cat Fleet &mdash; Barnegat Bay Maritime Museum Race &mdash; TRSS</p>
+          <p class="trophy-desc">In memory of Diane Beckett, who was in charge of the museum when it was called the Toms River Seaport Society, this trophy is presented to the winner of the annual A Cat race hosted by the Barnegat Bay Maritime Museum. <em>SPY</em> of IHYC has won the trophy seven times. <em>Spy</em> won the first recorded year in 1981 and continued dominating through the 1980s. Sean Bradley of MCYC won the most recent recorded year in 2024 aboard <em>Lightning</em>.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2024 &mdash; <em>Lightning</em> &mdash; Sean Bradley, MCYC<br>
+          2022 &mdash; <em>Torch</em>, BHYC<br>
+          2021 &mdash; <em>Spyder</em>, SPYC<br>
+          2020 &mdash; No Race<br>
+          2019 &mdash; <em>Tamwock</em><br>
+          2018 &mdash; <em>SPY</em> &mdash; Gary Stewart, IHYC<br>
+          2017 &mdash; <em>Torch</em><br>
+          2016 &mdash; <em>Wasp</em><br>
+          2015 &mdash; <em>Torch</em><br>
+          2014 &mdash; <em>Spyder</em><br>
+          2013 &mdash; <em>Spyder</em><br>
+          2012 &mdash; <em>Spyder</em><br>
+          2011 &mdash; <em>SPY</em> &mdash; Gary Stewart / Roy Wilkins, IHYC<br>
+          2010 &mdash; <em>Spyder</em> &mdash; Will Demand, SPYC<br>
+          2009 &mdash; <em>Lotus</em>, IHYC<br>
+          2008 &mdash; <em>SPY</em>, IHYC<br>
+          2007 &mdash; <em>Lotus</em> &mdash; Chip Hillyer, IHYC<br>
+          2006 &mdash; <em>Witch</em> &mdash; Austen Fragomen, BHYC<br>
+          2005 &mdash; <em>Witch</em><br>
+          2004 &mdash; <em>Ghost</em><br>
+          2003 &mdash; Not Awarded<br>
+          2002 &mdash; <em>Raven</em>, MCYC<br>
+          2001 &mdash; <em>Raven</em>, MCYC<br>
+          2000 &mdash; <em>Mary Ann</em><br>
+          1999 &mdash; <em>Wasp</em><br>
+          1998 &mdash; <em>Wasp</em><br>
+          1997 &mdash; <em>Ghost</em><br>
+          1995&ndash;1996 &mdash; Not Awarded<br>
+          1994 &mdash; <em>Ghost</em><br>
+          1993 &mdash; <em>Bat</em><br>
+          1992 &mdash; <em>Mary Ann</em><br>
+          1991 &mdash; <em>Spy</em>, IHYC<br>
+          1990 &mdash; <em>Mary Ann</em><br>
+          1989 &mdash; <em>Mary Ann</em><br>
+          1988 &mdash; <em>Spy</em><br>
+          1986&ndash;1987 &mdash; Not Awarded<br>
+          1985 &mdash; <em>Spy</em><br>
+          1984 &mdash; <em>Spy</em><br>
+          1983 &mdash; Not Awarded<br>
+          1982 &mdash; <em>Mary Ann</em><br>
+          1981 &mdash; <em>Spy</em>, IHYC<br>
+          1980 &mdash; <em>Lotus</em><br>
+          1979 &mdash; <em>Lotus</em><br>
+          1978 &mdash; <em>Bat</em><br>
+          1977 &mdash; <em>Lotus</em>
+        </div>
+        </div>
+      </div>
+
+      <div class="trophy-card">
+        <div class="trophy-card-photo"><img src="https://BBYRA-More.github.io/Trophies/oth_myth.jpg" alt="MYTH Trophy"/></div>
+        <div class="trophy-card-body">
+          <h3>The MYTH Trophy</h3>
+          <p class="trophy-meta">Barnegat Bay Charities Inc. &mdash; Dress Ship Competition</p>
+          <p class="trophy-desc">Barnegat Bay Charities Inc. presents a &ldquo;dress ship&rdquo; competition open to all types of sailing vessels owned by members of the BBYRA. The judges will select the competing sailing vessel, at anchor and at &ldquo;dress ship,&rdquo; that best displays the spirit of the occasion and whose vessel is presented in a clean, orderly, and seamanlike manner. The MYTH Trophy was graciously donated in 2003 by members of the MYTH 1889 Syndicate from BHYC. The 100-year-old oversized sterling silver flask is beautifully hand-engraved with &ldquo;MYTH Trophy&rdquo; and the MYTH 1889 pennant, mounted on a double pedestal base with engraving plaques. The perpetual trophy resides at the winner&rsquo;s BBYRA yacht club for one year, or until the next Barnegat Bay Ball.</p>
+          <span class="winners-label">Winners</span>
+          <div class="winners-list">
+          2006 &mdash; Record not available<br>
+          2005 &mdash; A Cat &mdash; <em>Vapor</em> &mdash; Jim Kellogg, BHYC<br>
+          2004 &mdash; A Cat &mdash; <em>Lightning</em> &mdash; Steven Brick, IHYC<br>
+          2003 &mdash; A Cat &mdash; <em>Wasp</em> &mdash; Albert Thrower, NBYC
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
