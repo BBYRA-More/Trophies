@@ -74,6 +74,14 @@ a{color:var(--navy);text-decoration:none;transition:color .2s;}a:hover{color:var
   .info-label{min-width:unset;}
   .card .card-body iframe{height:340px;}
 }
+</style>
+<style>
+/* page-specific: two-photo layout */
+.photos-wide{margin-bottom:10px;}
+.photos-wide .multi-photo figure{flex:1 1 260px;max-width:420px;}
+.photos-wide .multi-photo figure img{height:360px;object-fit:contain;background:var(--off-white);}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start;margin-bottom:10px;}
+@media(max-width:680px){.duo{grid-template-columns:1fr;}}
 </style></head><body>
 <section class="page-hero"><div class="page-hero-inner">
   <div class="breadcrumb"><a href="https://bbyra.org/member-club-trophies" target="_top">Trophies</a><span>/</span><a href="https://bbyra.org/member-club-trophies" target="_top">Seaside Park Yacht Club</a><span>/</span><span>Wolstenholme Perpetual Trophy</span></div>
@@ -81,16 +89,12 @@ a{color:var(--navy);text-decoration:none;transition:color .2s;}a:hover{color:var
   <h1>Robert Wolstenholme Perpetual Trophy</h1><div class="hero-meta"><span class="meta-badge gold">E Scow</span><span class="meta-badge">Host Day</span><span class="meta-badge">Est. 1925</span></div>
 </div></section>
 <main class="page-main">
-  <div class="layout">
-    <div class="col-left">
-      <div class="card"><div class="card-header"><h2>Trophy Photos</h2></div><div class="card-body">
-        <div class="multi-photo"><figure><img src="https://BBYRA-More.github.io/Trophies/sp_wolstenholmeFlag.jpg" alt="Wolstenholme Flag"/><figcaption>Wolstenholme Flag</figcaption></figure><figure><img src="https://BBYRA-More.github.io/Trophies/sp_wolstenholme.jpg" alt="Wolstenholme Trophy"/></figure></div>
-      </div></div>
-    </div>
-    <div class="col-right">
-      <div class="card"><div class="card-header"><h2>Trophy Details</h2></div><div class="card-body" style="padding:12px 18px;"><div class="info-row"><span class="info-label">Host Club</span><span class="info-value">Seaside Park Yacht Club (SPYC)</span></div><div class="info-row"><span class="info-label">Sailing Class</span><span class="info-value">E Scow</span></div><div class="info-row"><span class="info-label">Event Type</span><span class="info-value">BBYRA Host Day</span></div><div class="info-row"><span class="info-label">Donated By</span><span class="info-value">Robert Wolstenholme, 1925</span></div><div class="info-row"><span class="info-label">Trophy Home</span><span class="info-value">The Wolstenholme Room, SPYC</span></div></div></div>
-      <div class="card"><div class="card-header"><h2>Trophy History</h2></div><div class="card-body narrative"><p>The <strong>Robert Wolstenholme Perpetual Trophy</strong> was donated in 1925. The trophy is kept in the Wolstenholme Room at SPYC on a silver stand under glass. Two original engraved sails were famously lost overboard in a celebration; they were later replaced.</p></div></div>
-    </div>
+  <div class="card photos-wide"><div class="card-header"><h2>Trophy Photos</h2></div><div class="card-body">
+    <div class="multi-photo"><figure><img src="https://BBYRA-More.github.io/Trophies/sp_wolstenholmeFlag.jpg" alt="Wolstenholme Flag"/><figcaption>Wolstenholme Flag</figcaption></figure><figure><img src="https://BBYRA-More.github.io/Trophies/sp_wolstenholme.jpg" alt="Wolstenholme Trophy"/></figure></div>
+  </div></div>
+  <div class="duo">
+    <div class="card"><div class="card-header"><h2>Trophy Details</h2></div><div class="card-body" style="padding:12px 18px;"><div class="info-row"><span class="info-label">Host Club</span><span class="info-value">Seaside Park Yacht Club (SPYC)</span></div><div class="info-row"><span class="info-label">Sailing Class</span><span class="info-value">E Scow</span></div><div class="info-row"><span class="info-label">Event Type</span><span class="info-value">BBYRA Host Day</span></div><div class="info-row"><span class="info-label">Donated By</span><span class="info-value">Robert Wolstenholme, 1925</span></div><div class="info-row"><span class="info-label">Trophy Home</span><span class="info-value">The Wolstenholme Room, SPYC</span></div></div></div>
+    <div class="card"><div class="card-header"><h2>Trophy History</h2></div><div class="card-body narrative"><p>The <strong>Robert Wolstenholme Perpetual Trophy</strong> was donated in 1925. The trophy is kept in the Wolstenholme Room at SPYC on a silver stand under glass. Two original engraved sails were famously lost overboard in a celebration; they were later replaced.</p></div></div>
   </div>
   <div class="card"><div class="card-header"><h2>Trophy Winners History</h2></div>
   <div class="card-body" style="padding:16px 20px;">
