@@ -16,14 +16,17 @@ a{color:var(--navy);text-decoration:none;transition:color .2s;}a:hover{color:var
 .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
 .meta-badge{font-size:0.73rem;font-weight:600;padding:3px 11px;border-radius:20px;color:rgba(255,255,255,0.85);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);}
 .meta-badge.gold{border-color:rgba(200,144,42,0.6);color:var(--gold-light);background:rgba(200,144,42,0.12);}
-.page-main{max-width:960px;margin:0 auto;padding:36px 24px 24px;display:block;}
+.page-main{max-width:1040px;margin:0 auto;padding:4px 24px;display:block;}
+.layout{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:12px;align-items:start;margin-bottom:12px;}
+.col-right{display:flex;flex-direction:column;gap:12px;min-width:0;}
+.col-left,.col-right .card,.layout>.col-left .card{margin-bottom:0;}
 
-.card{background:var(--white);border-radius:10px;box-shadow:var(--shadow-md);overflow:hidden;margin-bottom:24px;}
+.card{background:var(--white);border-radius:10px;box-shadow:var(--shadow-md);overflow:hidden;margin-bottom:0;}
 .card:last-child{margin-bottom:0;}
-.card-header{background:linear-gradient(90deg,var(--navy) 0%,var(--navy-mid) 100%);padding:14px 22px;}
+.card-header{background:linear-gradient(90deg,var(--navy) 0%,var(--navy-mid) 100%);padding:10px 22px;}
 .card-header h2{font-family:var(--font-serif);font-size:0.95rem;font-weight:700;color:var(--white);}
-.card-body{padding:22px 24px;}
-.trophy-photo-wrap{text-align:center;margin-bottom:22px;}
+.card-body{padding:14px 20px;}
+.trophy-photo-wrap{text-align:center;margin-bottom:0;}
 .trophy-photo-wrap img{max-width:100%;max-height:340px;width:auto;border-radius:var(--radius);box-shadow:var(--shadow-md);border:3px solid var(--gray-light);}
 .trophy-photo-wrap .photo-caption{font-size:0.75rem;color:var(--gray-text);margin-top:8px;font-style:italic;}
 .trophy-photo-wrap a{color:var(--gray-text);font-size:0.75rem;}.trophy-photo-wrap a:hover{color:var(--gold);}
@@ -45,7 +48,7 @@ a{color:var(--navy);text-decoration:none;transition:color .2s;}a:hover{color:var
 .info-row{display:flex;flex-direction:row;align-items:baseline;gap:8px;padding:4px 0;border-bottom:none;}
 .info-label{font-size:0.70rem;font-weight:700;color:var(--gray-text);white-space:nowrap;min-width:110px;}
 .info-value{font-size:0.84rem;color:var(--text);font-weight:400;line-height:1.3;}
-.archive-btn{display:block;text-align:center;background:var(--off-white);border:1.5px solid var(--gray-light);color:var(--navy);padding:10px 18px;border-radius:var(--radius);font-size:0.85rem;font-weight:600;transition:all .18s;margin-top:14px;}
+.archive-btn{display:block;text-align:center;background:var(--off-white);border:1.5px solid var(--gray-light);color:var(--navy);padding:10px 18px;border-radius:var(--radius);font-size:0.85rem;font-weight:600;transition:all .18s;margin-top:10px;}
 .archive-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy);}
 .club-list a{display:block;font-size:0.82rem;padding:6px 0;border-bottom:1px solid var(--gray-light);color:var(--navy);}
 .club-list a:last-child{border-bottom:none;}.club-list a.current{color:var(--gold);font-weight:700;}.club-list a:hover{color:var(--gold);}
@@ -61,7 +64,8 @@ a{color:var(--navy);text-decoration:none;transition:color .2s;}a:hover{color:var
 @media(max-width:680px){
   .page-hero{padding:28px 16px 24px;}
   .page-hero h1{font-size:1.3rem;}
-  .page-main{padding:20px 12px 40px;}
+  .page-main{padding:4px 12px;}
+  .layout{grid-template-columns:1fr;}
   .card-body{padding:14px 14px;}
   .multi-photo{flex-direction:column;align-items:center;}
   .multi-photo figure{max-width:100%;}
@@ -71,29 +75,54 @@ a{color:var(--navy);text-decoration:none;transition:color .2s;}a:hover{color:var
 }
 </style></head><body>
 <section class="page-hero"><div class="page-hero-inner">
-  <div class="breadcrumb"><a href="../club-trophies.html">Trophies</a><span>/</span><a href="../club-trophies.html#ihyc">Island Heights Yacht Club</a><span>/</span><span>Atkinson Trophy</span></div>
+  <div class="breadcrumb"><a href="https://bbyra.org/member-club-trophies" target="_top">Trophies</a><span>/</span><a href="https://bbyra.org/member-club-trophies" target="_top">Island Heights Yacht Club</a><span>/</span><span>Atkinson Trophy</span></div>
   <p class="hero-eyebrow">Island Heights Yacht Club &mdash; IHYC</p>
   <h1>A. W. Atkinson Perpetual Cup</h1><div class="hero-meta"><span class="meta-badge gold">E Scow</span><span class="meta-badge">Host Day</span><span class="meta-badge">Est. 1925</span></div>
 </div></section>
 <main class="page-main">
-  <div class="card"><div class="card-header"><h2>Trophy Photo</h2></div><div class="card-body">
-  <div class="trophy-photo-wrap">
-    <img src="https://BBYRA-More.github.io/Trophies/ih_atkinson.jpg" alt="Atkinson Trophy"/>
-  </div></div>
-  <div class="card"><div class="card-header"><h2>Trophy Details</h2></div><div class="card-body" style="padding:12px 18px;"><div style="display:grid;grid-template-columns:1fr 1fr;gap:2px 24px;"><div class="info-row"><span class="info-label">Host Club</span><span class="info-value">Island Heights Yacht Club (IHYC)</span></div><div class="info-row"><span class="info-label">Sailing Class</span><span class="info-value">E Scow</span></div><div class="info-row"><span class="info-label">Event Type</span><span class="info-value">BBYRA Host Day</span></div><div class="info-row"><span class="info-label">Full Name</span><span class="info-value">A. W. Atkinson Perpetual Cup for Sloops</span></div><a class="archive-btn" href="https://bbyraarchive.org/trophy/ih_atkinsonDOG.doc" target="_blank" rel="noopener">&#128196; Deed of Gift</a></div></div></div>
-  <div class="card"><div class="card-header"><h2>Trophy History</h2></div><div class="card-body narrative"><p>The <strong>A. W. Atkinson Perpetual Cup for Sloops</strong> is one of the longest-running trophies on Barnegat Bay, with records back to 1925. Awarded to the winner of the E Scow race on Island Heights Yacht Club&rsquo;s BBYRA Host Day.</p>
-<a class="archive-btn" href="https://bbyraarchive.org/trophy/ih_atkinsonDOG.doc" target="_blank" rel="noopener">&#128196; Deed of Gift (.doc)</a></div></div>
+  <div class="layout">
 
-  
-  <aside class="sidebar">
+    <div class="col-left">
+      <div class="card">
+        <div class="card-header"><h2>Trophy Photo</h2></div>
+        <div class="card-body">
+          <div class="trophy-photo-wrap">
+            <img src="https://BBYRA-More.github.io/Trophies/ih_atkinson.jpg" alt="Atkinson Trophy"/>
+          </div>
+        </div>
+      </div>
     </div>
-    
-  </aside>
 
-  <div class="card"><div class="card-header"><h2>Trophy Winners History</h2></div>
-  <div class="card-body" style="padding:16px 20px;">
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQqzSBMteLUTIbn75tiwJi4juJA5f577Giu5HNo-28mMgMD9k2775GZEGEJFbvLQEGlN0tR7K3_9mL1/pubhtml?gid=1889103428&single=true&widget=false&headers=false&chrome=false" width="100%" height="500" frameborder="0" title="Trophy winners"></iframe>
-    <p style="font-size:0.75rem;color:var(--gray-text);margin-top:8px;font-style:italic;text-align:right;">Data maintained in the BBYRA Trophy spreadsheet &mdash; updates appear automatically.</p>
-  </div></div>
+    <div class="col-right">
+      <div class="card">
+        <div class="card-header"><h2>Trophy Details</h2></div>
+        <div class="card-body" style="padding:10px 18px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px 24px;">
+            <div class="info-row"><span class="info-label">Host Club</span><span class="info-value">Island Heights Yacht Club (IHYC)</span></div>
+            <div class="info-row"><span class="info-label">Sailing Class</span><span class="info-value">E Scow</span></div>
+            <div class="info-row"><span class="info-label">Event Type</span><span class="info-value">BBYRA Host Day</span></div>
+            <div class="info-row"><span class="info-label">Full Name</span><span class="info-value">A. W. Atkinson Perpetual Cup for Sloops</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><h2>Trophy History</h2></div>
+        <div class="card-body narrative">
+          <p>The <strong>A. W. Atkinson Perpetual Cup for Sloops</strong> is one of the longest-running trophies on Barnegat Bay, with records back to 1925. Awarded to the winner of the E Scow race on Island Heights Yacht Club&rsquo;s BBYRA Host Day.</p>
+          <a class="archive-btn" href="https://bbyraarchive.org/trophy/ih_atkinsonDOG.doc" target="_blank" rel="noopener">&#128196; Deed of Gift (.doc)</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card">
+    <div class="card-header"><h2>Trophy Winners History</h2></div>
+    <div class="card-body" style="padding:12px 20px;">
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQqzSBMteLUTIbn75tiwJi4juJA5f577Giu5HNo-28mMgMD9k2775GZEGEJFbvLQEGlN0tR7K3_9mL1/pubhtml?gid=1889103428&single=true&widget=false&headers=false&chrome=false" width="100%" height="500" frameborder="0" title="Trophy winners"></iframe>
+      <p style="font-size:0.75rem;color:var(--gray-text);margin-top:4px;font-style:italic;text-align:right;">Data maintained in the BBYRA Trophy spreadsheet &mdash; updates appear automatically.</p>
+    </div>
+  </div>
 </main>
 </body></html>
